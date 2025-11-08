@@ -3,7 +3,6 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/* Register theme tokens */
 @theme inline {
   --color-background: hsl(var(--background));
   --color-foreground: hsl(var(--foreground));
@@ -20,8 +19,8 @@
     --background: 240 7% 97%;
     --foreground: 240 7% 6%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 220 20% 94%;
+    --muted-foreground: 220 10% 40%;
 
     --accent: 210 40% 96.1%;
     --accent-foreground: 222.2 47.4% 11.2%;
@@ -32,14 +31,14 @@
     --card: 225 10% 93%;
     --card-foreground: 222.2 47.4% 11.2%;
 
-    --primary: 176 77% 41%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 241 8% 7%;
+    --primary-foreground: 240 7% 6%;
 
-    --secondary: 210 29% 96%;
+    --secondary: 28 100% 55%;
     --secondary-foreground: 222.2 47.4% 11.2%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 240 7% 97%;
+    --border: 215 16% 82%;
+    --input: 0 0% 100%;
     --radius: 0.5rem;
   }
 
@@ -47,8 +46,8 @@
     --background: 227 13% 14%;
     --foreground: 213 31% 91%;
 
-    --muted: 224 16% 27%;
-    --muted-foreground: 215.4 16.3% 56.9%;
+    --muted: 225 12% 22%;
+    --muted-foreground: 220 15% 70%;
 
     --accent: 227 13% 27%;
     --accent-foreground: 210 40% 98%;
@@ -59,14 +58,14 @@
     --card: 224 16% 19%;
     --card-foreground: 213 31% 91%;
 
-    --primary: 176 77% 41%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 0 0% 100%;
+    --primary-foreground: 227 13% 14%;
 
-    --secondary: 230 12% 29%;
+    --secondary: 28 100% 55%;
     --secondary-foreground: 210 40% 98%;
 
-    --border: 217 19% 27%;
-    --input: 227 13% 14%;
+    --border: 220 10% 35%;
+    --input: 227 13% 18%;
     --radius: 0.5rem;
   }
 

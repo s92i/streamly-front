@@ -5,6 +5,8 @@ import { getLocale, getMessages } from "next-intl/server";
 
 import "./globals.css";
 import { ApolloClientProvider } from "@/providers/ApolloClientProvider";
+import { ThemeProvider } from "@/providers/ThemeProvider";
+import { ToastProvider } from "@/providers/ToastProvider";
 
 export const metadata: Metadata = {
   title: "Streamly – Watch Live Streams Instantly",
@@ -21,11 +23,19 @@ export default async function RootLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale}>
+    <html lang={locale} suppressHydrationWarning>
       <body className={GeistSans.variable}>
         <ApolloClientProvider>
           <NextIntlClientProvider messages={messages}>
-            {children}
+            <ThemeProvider
+              attribute="class"
+              defaultTheme="dark"
+              disableTransitionOnChange
+              enableSystem
+            >
+              <ToastProvider />
+              {children}
+            </ThemeProvider>
           </NextIntlClientProvider>
         </ApolloClientProvider>
       </body>

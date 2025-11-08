@@ -1,5 +1,21 @@
 {
-	"home": {
-		"title": "Home"
-	}
+  "auth": {
+    "register": {
+      "heading": "Register on Streamly",
+      "backButtonLabel": "Already have an account ? Sign in",
+      "usernameLabel": "Username",
+      "usernameDescription": "This is the name other users will know you by. You change it later",
+      "emailLabel": "Email",
+      "emailDescription": "We may use your email for sending account-related notifications",
+      "passwordLabel": "Password",
+      "passwordDescription": "The password must contain at least 8 characters",
+      "submitButton": "Sign up",
+      "successAlertTitle": "Check your email",
+      "successAlertDescription": "A verification email has been sent to your inbox. If you don't see it check your spam folder",
+      "errorMessage": "Error when creating an account"
+    },
+    "verify": {
+      "successMessage": "Account verified"
+    }
+  }
 }

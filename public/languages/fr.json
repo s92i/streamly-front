@@ -1,5 +1,21 @@
 {
-	"home": {
-		"title": "Accueil"
-	}
+  "auth": {
+    "register": {
+      "heading": "Inscrivez-vous sur Streamly",
+      "backButtonLabel": "Vous avez déjà un compte ? Connectez-vous",
+      "usernameLabel": "Nom d'utilisateur",
+      "usernameDescription": "C'est le nom sous lequel les autres utilisateurs vous connaîtront. Vous pourrez le modifier plus tard",
+      "emailLabel": "Email",
+      "emailDescription": "Nous pouvons utiliser votre adresse e-mail pour vous envoyer des notifications relatives à votre compte.",
+      "passwordLabel": "Mot de passe",
+      "passwordDescription": "Le mot de passe doit contenir au moins 8 caractères",
+      "submitButton": "S'inscrire",
+      "successAlertTitle": "Vérifiez vos emails",
+      "successAlertDescription": "Un courriel de vérification a été envoyé dans votre boîte de réception. Si vous ne le voyez pas, vérifiez votre dossier de courriers indésirables.",
+      "errorMessage": "Erreur lors de la création du compte"
+    },
+    "verify": {
+      "successMessage": "Compte vérifié"
+    }
+  }
 }
