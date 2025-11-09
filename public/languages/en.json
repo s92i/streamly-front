@@ -1,4 +1,7 @@
 {
+  "home": {
+    "title": "Home"
+  },
   "auth": {
     "register": {
       "heading": "Register on Streamly",
@@ -12,10 +15,27 @@
       "submitButton": "Sign up",
       "successAlertTitle": "Check your email",
       "successAlertDescription": "A verification email has been sent to your inbox. If you don't see it check your spam folder",
+      "successMessage": "Account created",
       "errorMessage": "Error when creating an account"
     },
     "verify": {
-      "successMessage": "Account verified"
+      "heading": "Account verification",
+      "successMessage": "Account verified",
+      "errorMessage": "Verification error"
+    },
+    "login": {
+      "heading": "Login to Streamly",
+      "backButtonLabel": "Don't have an account ? Sign up",
+      "loginLabel": "Login",
+      "loginDescription": "Your username or email that you used during registration",
+      "passwordLabel": "Password",
+      "passwordDescription": "The password you used during registration",
+      "pinLabel": "6-digit code",
+      "pinDescription": "Enter the code from your authentication app",
+      "forgotPassword": "Forgot your password ?",
+      "submitButton": "Login",
+      "successMessage": "You have successfully logged in",
+      "errorMessage": "Error when logging in"
     }
   }
 }

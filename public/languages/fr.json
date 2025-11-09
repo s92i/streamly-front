@@ -1,4 +1,7 @@
 {
+  "home": {
+    "title": "Accueil"
+  },
   "auth": {
     "register": {
       "heading": "Inscrivez-vous sur Streamly",
@@ -12,10 +15,27 @@
       "submitButton": "S'inscrire",
       "successAlertTitle": "Vérifiez vos emails",
       "successAlertDescription": "Un courriel de vérification a été envoyé dans votre boîte de réception. Si vous ne le voyez pas, vérifiez votre dossier de courriers indésirables.",
+      "successMessage": "Compte créé",
       "errorMessage": "Erreur lors de la création du compte"
     },
     "verify": {
-      "successMessage": "Compte vérifié"
+      "heading": "Vérification du compte",
+      "successMessage": "Compte vérifié",
+      "errorMessage": "Erreur de vérification"
+    },
+    "login": {
+      "heading": "Connectez-vous à Streamly",
+      "backButtonLabel": "Vous n'avez pas de compte ? Inscrivez-vous",
+      "loginLabel": "Connexion",
+      "loginDescription": "Votre nom d'utilisateur ou email que vous avez utilisé lors de l'inscription",
+      "passwordLabel": "Mot de passe",
+      "passwordDescription": "Le mot de passe que vous avez utilisé lors de votre inscription",
+      "pinLabel": "Code à 6 chiffres",
+      "pinDescription": "Saisissez le code de votre application d'authentification",
+      "forgotPassword": "Mot de passe oublié ?",
+      "submitButton": "Connexion",
+      "successMessage": "Connexion réussie",
+      "errorMessage": "Erreur lors de la connexion"
     }
   }
 }

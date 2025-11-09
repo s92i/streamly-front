@@ -25,13 +25,14 @@ import {
   AlertDescription,
   AlertTitle,
 } from "@/components/ui/common/Alert";
-import { CircleCheck } from "lucide-react";
+import { CircleCheck, Eye, EyeOff } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 export function CreateAccountForm() {
   const t = useTranslations("auth.register");
 
   const [isSuccess, setIsSuccess] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
 
   const form = useForm<TypeCreateAccountSchema>({
     resolver: zodResolver(createAccountSchema),
@@ -45,7 +46,7 @@ export function CreateAccountForm() {
   const [create, { loading: isLoadingCreate }] = useCreateUserMutation({
     onCompleted() {
       setIsSuccess(true);
-      toast.success("Successful registration");
+      toast.success(t("successMessage"));
     },
     onError() {
       toast.error(t("errorMessage"));
@@ -114,12 +115,30 @@ export function CreateAccountForm() {
                 <FormItem>
                   <FormLabel>{t("passwordLabel")}</FormLabel>
                   <FormControl>
-                    <Input
-                      placeholder="********"
-                      type="password"
-                      {...field}
-                      disabled={isLoadingCreate}
-                    />
+                    <div className="relative">
+                      <Input
+                        placeholder="********"
+                        type={showPassword ? "text" : "password"}
+                        {...field}
+                        disabled={isLoadingCreate}
+                      />
+                      <button
+                        type="button"
+                        tabIndex={-1}
+                        onClick={() => setShowPassword((prev) => !prev)}
+                        className="absolute right-2 top-1/2 -translate-y-1/2 focus:outline-none"
+                        aria-label={
+                          showPassword ? "Hide password" : "Show password"
+                        }
+                        disabled={isLoadingCreate}
+                      >
+                        {showPassword ? (
+                          <EyeOff className="size-5 text-muted-foreground" />
+                        ) : (
+                          <Eye className="size-5 text-muted-foreground" />
+                        )}
+                      </button>
+                    </div>
                   </FormControl>
                   <FormDescription>{t("passwordDescription")}</FormDescription>
                 </FormItem>
