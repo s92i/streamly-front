@@ -45,10 +45,15 @@ export function LoginForm() {
 
   const [login, { loading: isLoadingLogin }] = useLoginUserMutation({
     onCompleted(data) {
-      if (data.loginUser.message) {
+      const message = data.loginUser?.message;
+
+      if (message === "A code is required to complete authorization") {
         setIsShowTwoFactor(true);
-      } else {
+      } else if (message === "Login successful") {
+        toast.success(t("successMessage"));
         router.push("/dashboard/settings");
+      } else {
+        toast.error("Unexpected login response");
       }
     },
     onError() {

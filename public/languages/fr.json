@@ -34,6 +34,7 @@
       "pinDescription": "Saisissez le code de votre application d'authentification",
       "forgotPassword": "Mot de passe oublié ?",
       "submitButton": "Connexion",
+      "successMessage": "Connexion réussie",
       "errorMessage": "Erreur lors de la connexion"
     },
     "resetPassword": {

@@ -34,6 +34,7 @@
       "pinDescription": "Enter the code from your authentication app",
       "forgotPassword": "Forgot your password ?",
       "submitButton": "Login",
+      "successMessage": "Login successful",
       "errorMessage": "Error when logging in"
     },
     "resetPassword": {

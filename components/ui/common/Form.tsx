@@ -11,9 +11,15 @@ import {
   type FieldPath,
   type FieldValues,
 } from "react-hook-form";
-
 import { cn } from "@/lib/utils";
-import { type ComponentProps, createContext, useContext, useId } from "react";
+import {
+  type ComponentProps,
+  createContext,
+  useContext,
+  useId,
+  useEffect,
+  useState,
+} from "react";
 import { Label } from "./Label";
 
 const Form = FormProvider;
@@ -41,6 +47,17 @@ const FormField = <
     </FormFieldContext.Provider>
   );
 };
+
+function useStableId() {
+  const reactId = useId();
+  const [id, setId] = useState<string | null>(null);
+
+  useEffect(() => {
+    setId(reactId);
+  }, [reactId]);
+
+  return id;
+}
 
 const useFormField = () => {
   const fieldContext = useContext(FormFieldContext);
@@ -74,10 +91,10 @@ const FormItemContext = createContext<FormItemContextValue>(
 );
 
 function FormItem({ className, ...props }: React.ComponentProps<"div">) {
-  const id = useId();
+  const id = useStableId();
 
   return (
-    <FormItemContext.Provider value={{ id }}>
+    <FormItemContext.Provider value={{ id: id ?? "pending-id" }}>
       <div
         data-slot="form-item"
         className={cn("grid gap-2", className)}
