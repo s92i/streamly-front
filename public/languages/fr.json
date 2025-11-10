@@ -34,8 +34,28 @@
       "pinDescription": "Saisissez le code de votre application d'authentification",
       "forgotPassword": "Mot de passe oublié ?",
       "submitButton": "Connexion",
-      "successMessage": "Connexion réussie",
       "errorMessage": "Erreur lors de la connexion"
+    },
+    "resetPassword": {
+      "heading": "Réinitialiser le mot de passe",
+      "backButtonLabel": "Vous avez déjà un compte ? Connectez-vous",
+      "emailLabel": "Email",
+      "emailDescription": "L'email que vous avez utilisé lors de l'inscription",
+      "submitButton": "Réinitialiser le mot de passe",
+      "successAlertTitle": "Lien envoyé",
+      "successAlertDescription": "Nous avons envoyé un lien de réinitialisation de mot de passe à votre adresse email. Si vous avez activé les notifications Telegram, le lien y a également été envoyé.",
+      "errorMessage": "Erreur lors de la réinitialisation du mot de passe"
+    },
+    "newPassword": {
+      "heading": "Nouveau mot de passe",
+      "backButtonLabel": "Vous avez déjà un compte ? Connectez-vous",
+      "passwordLabel": "Nouveau mot de passe",
+      "passwordDescription": "Le mot de passe que vous avez utilisé lors de votre inscription",
+      "passwordRepeatLabel": "Répétez le mot de passe",
+      "passwordRepeatDescription": "Répétez votre nouveau mot de passe pour confirmation",
+      "submitButton": "Définir le nouveau mot de passe",
+      "successMessage": "Mot de passe modifié avec succès",
+      "errorMessage": "Erreur lors de la définition du nouveau mot de passe"
     }
   }
 }

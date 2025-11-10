@@ -1,7 +1,7 @@
 "use client";
 
 import { useLoginUserMutation } from "@/graphql/generated/output";
-import { loginSchema, TypeLoginSchema } from "@/schemas/auth/login.schema";
+import { loginSchema, type TypeLoginSchema } from "@/schemas/auth/login.schema";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useTranslations } from "next-intl";
 import { useForm } from "react-hook-form";
@@ -25,6 +25,7 @@ import {
   InputOTPGroup,
   InputOTPSlot,
 } from "@/components/ui/common/InputOTP";
+import Link from "next/link";
 
 export function LoginForm() {
   const t = useTranslations("auth.login");
@@ -47,7 +48,6 @@ export function LoginForm() {
       if (data.loginUser.message) {
         setIsShowTwoFactor(true);
       } else {
-        toast.success(t("successMessage"));
         router.push("/dashboard/settings");
       }
     },
@@ -117,7 +117,15 @@ export function LoginForm() {
                 name="password"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>{t("passwordLabel")}</FormLabel>
+                    <div className="flex items-center justify-between">
+                      <FormLabel>{t("passwordLabel")}</FormLabel>
+                      <Link
+                        href="/account/recovery"
+                        className="ml-auto inline-block text-sm"
+                      >
+                        {t("forgotPassword")}
+                      </Link>
+                    </div>
                     <FormControl>
                       <div className="relative">
                         <Input

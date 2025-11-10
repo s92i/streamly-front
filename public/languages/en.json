@@ -34,8 +34,28 @@
       "pinDescription": "Enter the code from your authentication app",
       "forgotPassword": "Forgot your password ?",
       "submitButton": "Login",
-      "successMessage": "You have successfully logged in",
       "errorMessage": "Error when logging in"
+    },
+    "resetPassword": {
+      "heading": "Reset Password",
+      "backButtonLabel": "Already have an account ? Sign in",
+      "emailLabel": "Email",
+      "emailDescription": "The email you used during registration",
+      "submitButton": "Reset password",
+      "successAlertTitle": "Link sent",
+      "successAlertDescription": "We have sent a password reset link to your email. If you have enabled Telegram notifications, the link was sent there as well",
+      "errorMessage": "Password reset error"
+    },
+    "newPassword": {
+      "heading": "New password",
+      "backButtonLabel": "Already have an account ? Sign in",
+      "passwordLabel": "New password",
+      "passwordDescription": "The password you used during registration",
+      "passwordRepeatLabel": "Repeat password",
+      "passwordRepeatDescription": "Repeat your new password for confirmation",
+      "submitButton": "Set new password",
+      "successMessage": "Password successfully changed",
+      "errorMessage": "Error when setting new password"
     }
   }
 }

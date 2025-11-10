@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import { AuthWrapper } from "../AuthWrapper";
 import {
   createAccountSchema,
-  TypeCreateAccountSchema,
+  type TypeCreateAccountSchema,
 } from "@/schemas/auth/create-account.schema";
 import { zodResolver } from "@hookform/resolvers/zod";
 import {
@@ -69,7 +69,7 @@ export function CreateAccountForm() {
         <Alert>
           <CircleCheck className="size-4" />
           <AlertTitle>{t("successAlertTitle")}</AlertTitle>
-          <AlertDescription>{t("emailDescription")}</AlertDescription>
+          <AlertDescription>{t("successAlertDescription")}</AlertDescription>
         </Alert>
       ) : (
         <Form {...form}>
