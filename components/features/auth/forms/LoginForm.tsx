@@ -26,10 +26,12 @@ import {
   InputOTPSlot,
 } from "@/components/ui/common/InputOTP";
 import Link from "next/link";
+import { useAuth } from "@/hooks/useAuth";
 
 export function LoginForm() {
   const t = useTranslations("auth.login");
 
+  const { auth } = useAuth();
   const router = useRouter();
 
   const [showPassword, setShowPassword] = useState(false);
@@ -50,6 +52,7 @@ export function LoginForm() {
       if (message === "A code is required to complete authorization") {
         setIsShowTwoFactor(true);
       } else if (message === "Login successful") {
+        auth();
         toast.success(t("successMessage"));
         router.push("/dashboard/settings");
       } else {

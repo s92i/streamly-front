@@ -1,6 +1,46 @@
 {
-  "home": {
-    "title": "Home"
+  "layout": {
+    "logo": {
+      "platform": "Streamly platform"
+    },
+    "headerMenu": {
+      "login": "Sign In",
+      "register": "Sign Up",
+      "profileMenu": {
+        "logoutSuccess": "Successfully logged out",
+        "channel": "My channel",
+        "dashboard": "Dashboard",
+        "logout": "Sign out"
+      }
+    },
+    "search": {
+      "placeholder": "Search"
+    },
+    "dashboardNav": {
+      "settings": "Settings",
+      "streamSettings": "Stream Settings",
+      "keys": "Stream Keys",
+      "chatSettings": "Chat Settings",
+      "followers": "Followers",
+      "sponsors": "Sponsors",
+      "premium": "Premium Plans",
+      "transactions": "Transactions"
+    },
+    "sidebarHeader": {
+      "expand": "Expand",
+      "collapse": "Collapse",
+      "navigation": "Navigation",
+      "forYou": "For You"
+    },
+    "userNav": {
+      "home": "Home",
+      "categories": "Categories",
+      "streams": "Streams",
+      "recommended": "Recommended"
+    },
+    "recommended": {
+      "heading": "Recommendations"
+    }
   },
   "auth": {
     "register": {
