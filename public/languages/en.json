@@ -4,10 +4,18 @@
       "platform": "Streamly platform"
     },
     "headerMenu": {
+      "heading": "Notifications",
       "login": "Sign In",
       "register": "Sign Up",
+      "loading": "Loading...",
       "profileMenu": {
-        "logoutSuccess": "Successfully logged out",
+        "notifications": {
+          "heading": "Notifications",
+          "loading": "Loading...",
+          "empty": "You have no notifications"
+        },
+        "successMessage": "Successfully logged out",
+        "errorMessage": "Logout error",
         "channel": "My channel",
         "dashboard": "Dashboard",
         "logout": "Sign out"

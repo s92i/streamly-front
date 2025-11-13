@@ -4,11 +4,18 @@
       "platform": "Streamly"
     },
     "headerMenu": {
+      "heading": "Notifications",
       "login": "Se connecter",
       "register": "S'inscrire",
+      "loading": "Chargement...",
       "profileMenu": {
-        "logoutSuccess": "Déconnexion réussie",
-        "channel": "Ma chaîne",
+        "notifications": {
+          "heading": "Notifications",
+          "loading": "Chargement...",
+          "empty": "Vous n'avez aucune notification"
+        },
+        "successMessage": "Déconnexion réussie",
+        "errorMessage": "Erreur lors de la déconnexion",
         "dashboard": "Tableau de bord",
         "logout": "Se déconnecter"
       }

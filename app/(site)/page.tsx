@@ -13,12 +13,12 @@ export default function Home() {
       ) : (
         <div>
           {JSON.stringify(user)}
-          <ChannelAvatar
+          {/*<ChannelAvatar
             channel={{
               username: user?.username!,
               avatar: user?.avatar,
             }}
-          />
+          />*/}
         </div>
       )}
     </div>

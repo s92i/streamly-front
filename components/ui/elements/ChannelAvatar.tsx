@@ -26,7 +26,7 @@ export function ChannelAvatar({ size, channel, isLive }: ChannelAvatarProps) {
   const imageSrc = useConstructUrl(channel.avatar);
 
   return (
-    <div className="relative">
+    <div className="relative cursor-pointer">
       <Avatar
         className={cn(avatarSizes({ size }), isLive && "ring-2 ring-rose-500")}
       >
