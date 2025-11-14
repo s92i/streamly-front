@@ -1,109 +1,113 @@
 {
   "layout": {
-    "logo": {
-      "platform": "Streamly"
-    },
-    "headerMenu": {
-      "heading": "Notifications",
-      "login": "Se connecter",
-      "register": "S'inscrire",
-      "loading": "Chargement...",
-      "profileMenu": {
-        "notifications": {
-          "heading": "Notifications",
-          "loading": "Chargement...",
-          "empty": "Vous n'avez aucune notification"
+    "header": {
+      "logo": {
+        "platform": "Plateforme Streamly"
+      },
+      "headerMenu": {
+        "heading": "Notifications",
+        "login": "Se connecter",
+        "register": "S'inscrire",
+        "loading": "Chargement...",
+        "profileMenu": {
+          "notifications": {
+            "heading": "Notifications",
+            "loading": "Chargement...",
+            "empty": "Vous n'avez aucune notification"
+          },
+          "successMessage": "Déconnexion réussie",
+          "errorMessage": "Erreur lors de la déconnexion",
+          "channel": "Ma chaîne",
+          "dashboard": "Tableau de bord",
+          "logout": "Se déconnecter"
+        }
+      },
+      "search": {
+        "placeholder": "Rechercher"
+      },
+      "sidebar": {
+        "header": {
+          "expand": "Développer",
+          "collapse": "Réduire",
+          "navigation": "Navigation"
         },
-        "successMessage": "Déconnexion réussie",
-        "errorMessage": "Erreur lors de la déconnexion",
-        "dashboard": "Tableau de bord",
-        "logout": "Se déconnecter"
+        "userNav": {
+          "home": "Accueil",
+          "categories": "Catégories",
+          "streams": "Streams",
+          "recommended": "Recommandé"
+        },
+        "recommended": {
+          "heading": "Recommandations"
+        },
+        "dashboardNav": {
+          "settings": "Paramètres",
+          "streamSettings": "Paramètres du stream",
+          "keys": "Clés de stream",
+          "chatSettings": "Paramètres du chat",
+          "followers": "Abonnés",
+          "sponsors": "Sponsors",
+          "premium": "Formules premium",
+          "transactions": "Transactions"
+        }
       }
     },
-    "search": {
-      "placeholder": "Rechercher"
-    },
-    "dashboardNav": {
-      "settings": "Paramètres",
-      "streamSettings": "Paramètres du stream",
-      "keys": "Clés du stream",
-      "chatSettings": "Paramètres du chat",
-      "followers": "Abonnés",
-      "sponsors": "Sponsors",
-      "premium": "Offres Premium",
-      "transactions": "Transactions"
-    },
-    "sidebarHeader": {
-      "expand": "Étendre",
-      "collapse": "Réduire",
-      "navigation": "Navigation",
-      "forYou": "Pour vous"
-    },
-    "userNav": {
-      "home": "Accueil",
-      "categories": "Catégories",
-      "streams": "Streams",
-      "recommended": "Recommandé"
-    },
-    "recommended": {
-      "heading": "Recommandations"
-    }
-  },
-  "auth": {
-    "register": {
-      "heading": "Inscrivez-vous sur Streamly",
-      "backButtonLabel": "Vous avez déjà un compte ? Connectez-vous",
-      "usernameLabel": "Nom d'utilisateur",
-      "usernameDescription": "C'est le nom sous lequel les autres utilisateurs vous connaîtront. Vous pourrez le modifier plus tard",
-      "emailLabel": "Email",
-      "emailDescription": "Nous pouvons utiliser votre adresse e-mail pour vous envoyer des notifications relatives à votre compte.",
-      "passwordLabel": "Mot de passe",
-      "passwordDescription": "Le mot de passe doit contenir au moins 8 caractères",
-      "submitButton": "S'inscrire",
-      "successAlertTitle": "Vérifiez vos emails",
-      "successAlertDescription": "Un courriel de vérification a été envoyé dans votre boîte de réception. Si vous ne le voyez pas, vérifiez votre dossier de courriers indésirables.",
-      "successMessage": "Compte créé",
-      "errorMessage": "Erreur lors de la création du compte"
-    },
-    "verify": {
-      "heading": "Vérification du compte",
-      "successMessage": "Compte vérifié",
-      "errorMessage": "Erreur de vérification"
-    },
-    "login": {
-      "heading": "Connectez-vous à Streamly",
-      "backButtonLabel": "Vous n'avez pas de compte ? Inscrivez-vous",
-      "loginLabel": "Connexion",
-      "loginDescription": "Votre nom d'utilisateur ou email que vous avez utilisé lors de l'inscription",
-      "passwordLabel": "Mot de passe",
-      "passwordDescription": "Le mot de passe que vous avez utilisé lors de votre inscription",
-      "pinLabel": "Code à 6 chiffres",
-      "pinDescription": "Saisissez le code de votre application d'authentification",
-      "forgotPassword": "Mot de passe oublié ?",
-      "submitButton": "Connexion",
-      "successMessage": "Connexion réussie",
-      "errorMessage": "Erreur lors de la connexion"
-    },
-    "resetPassword": {
-      "heading": "Réinitialiser le mot de passe",
-      "backButtonLabel": "Vous avez déjà un compte ? Connectez-vous",
-      "emailLabel": "Email",
-      "emailDescription": "L'email que vous avez utilisé lors de l'inscription",
-      "submitButton": "Réinitialiser le mot de passe",
-      "successAlertTitle": "Lien envoyé",
-      "successAlertDescription": "Nous avons envoyé un lien de réinitialisation de mot de passe à votre adresse email. Si vous avez activé les notifications Telegram, le lien y a également été envoyé.",
-      "errorMessage": "Erreur lors de la réinitialisation du mot de passe"
-    },
-    "newPassword": {
-      "heading": "Nouveau mot de passe",
-      "backButtonLabel": "Vous avez déjà un compte ? Connectez-vous",
-      "passwordLabel": "Nouveau mot de passe",
-      "passwordDescription": "Le mot de passe que vous avez utilisé lors de votre inscription",
-      "passwordRepeatLabel": "Répétez le mot de passe",
-      "passwordRepeatDescription": "Répétez votre nouveau mot de passe pour confirmation",
-      "submitButton": "Définir le nouveau mot de passe",
-      "successMessage": "Mot de passe modifié avec succès",
-      "errorMessage": "Erreur lors de la définition du nouveau mot de passe"
+    "auth": {
+      "register": {
+        "heading": "Inscription sur Streamly",
+        "backButtonLabel": "Vous avez déjà un compte ? Connectez-vous",
+        "usernameLabel": "Nom d'utilisateur",
+        "usernameDescription": "C'est le nom sous lequel les autres utilisateurs vous connaîtront. Vous pouvez le changer plus tard",
+        "emailLabel": "Email",
+        "emailDescription": "Nous pouvons utiliser votre email pour envoyer des notifications liées à votre compte",
+        "passwordLabel": "Mot de passe",
+        "passwordDescription": "Le mot de passe doit contenir au moins 8 caractères",
+        "submitButton": "S'inscrire",
+        "successAlertTitle": "Vérifiez votre email",
+        "successAlertDescription": "Un email de vérification a été envoyé dans votre boîte de réception. Si vous ne le voyez pas, vérifiez votre dossier spam",
+        "successMessage": "Compte créé",
+        "errorMessage": "Erreur lors de la création d'un compte"
+      },
+      "verify": {
+        "heading": "Vérification du compte",
+        "successMessage": "Compte vérifié",
+        "errorMessage": "Erreur de vérification"
+      },
+      "login": {
+        "heading": "Connexion à Streamly",
+        "backButtonLabel": "Vous n'avez pas de compte ? Inscrivez-vous",
+        "loginLabel": "Identifiant",
+        "loginDescription": "Votre nom d'utilisateur ou email utilisé lors de l'inscription",
+        "passwordLabel": "Mot de passe",
+        "passwordDescription": "Le mot de passe que vous avez utilisé lors de l'inscription",
+        "pinLabel": "Code à 6 chiffres",
+        "pinDescription": "Entrez le code de votre application d’authentification",
+        "forgotPassword": "Mot de passe oublié ?",
+        "submitButton": "Se connecter",
+        "successMessage": "Connexion réussie",
+        "errorMessage": "Erreur lors de la connexion"
+      },
+      "resetPassword": {
+        "heading": "Réinitialiser le mot de passe",
+        "backButtonLabel": "Vous avez déjà un compte ? Connectez-vous",
+        "emailLabel": "Email",
+        "emailDescription": "L'email que vous avez utilisé lors de l'inscription",
+        "submitButton": "Réinitialiser le mot de passe",
+        "successAlertTitle": "Lien envoyé",
+        "successAlertDescription": "Nous avons envoyé un lien de réinitialisation du mot de passe à votre adresse email. Si vous avez activé les notifications Telegram, le lien y a également été envoyé",
+        "errorMessage": "Erreur de réinitialisation du mot de passe"
+      },
+      "newPassword": {
+        "heading": "Nouveau mot de passe",
+        "backButtonLabel": "Vous avez déjà un compte ? Connectez-vous",
+        "passwordLabel": "Nouveau mot de passe",
+        "passwordDescription": "Le mot de passe que vous avez utilisé lors de l'inscription",
+        "passwordRepeatLabel": "Répéter le mot de passe",
+        "passwordRepeatDescription": "Répétez votre nouveau mot de passe pour confirmation",
+        "submitButton": "Définir le nouveau mot de passe",
+        "successMessage": "Mot de passe changé avec succès",
+        "errorMessage": "Erreur lors de la définition du nouveau mot de passe"
+      }
     }
   }
 }

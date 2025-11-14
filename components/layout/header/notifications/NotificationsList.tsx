@@ -10,7 +10,9 @@ import { Fragment } from "react/jsx-runtime";
 import parse from "html-react-parser";
 
 export function NotificationsList() {
-  const t = useTranslations("layout.headerMenu");
+  const t = useTranslations(
+    "layout.header.headerMenu.profileMenu.notifications"
+  );
 
   const { refetch } = useFindNotificationsUnreadCountQuery();
 

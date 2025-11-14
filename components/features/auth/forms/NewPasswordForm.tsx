@@ -25,7 +25,7 @@ import { Input } from "@/components/ui/common/Input";
 import { Eye, EyeOff } from "lucide-react";
 
 export function NewPasswordForm() {
-  const t = useTranslations("auth.newPassword");
+  const t = useTranslations("layout.auth.newPassword");
 
   const router = useRouter();
   const params = useParams<{ token: string }>();

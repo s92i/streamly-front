@@ -29,7 +29,7 @@ import { CircleCheck, Eye, EyeOff } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 export function CreateAccountForm() {
-  const t = useTranslations("auth.register");
+  const t = useTranslations("layout.auth.register");
 
   const [isSuccess, setIsSuccess] = useState(false);
   const [showPassword, setShowPassword] = useState(false);

@@ -8,7 +8,7 @@ import { useRouter } from "next/navigation";
 import { type FormEvent, useState } from "react";
 
 export function Search() {
-  const t = useTranslations("layout.search");
+  const t = useTranslations("layout.header.search");
 
   const [searchTerm, setSearchTerm] = useState("");
   const router = useRouter();

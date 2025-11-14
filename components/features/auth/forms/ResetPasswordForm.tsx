@@ -29,7 +29,7 @@ import { Input } from "@/components/ui/common/Input";
 import { Button } from "@/components/ui/common/Button";
 
 export function ResetPasswordForm() {
-  const t = useTranslations("auth.resetPassword");
+  const t = useTranslations("layout.auth.resetPassword");
 
   const [isSuccess, setIsSuccess] = useState(false);
 

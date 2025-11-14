@@ -29,7 +29,7 @@ import Link from "next/link";
 import { useAuth } from "@/hooks/useAuth";
 
 export function LoginForm() {
-  const t = useTranslations("auth.login");
+  const t = useTranslations("layout.auth.login");
 
   const { auth } = useAuth();
   const router = useRouter();

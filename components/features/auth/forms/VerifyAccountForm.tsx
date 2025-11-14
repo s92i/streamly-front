@@ -10,7 +10,7 @@ import { Loader } from "lucide-react";
 import { useAuth } from "@/hooks/useAuth";
 
 export function VerifyAccountForm() {
-  const t = useTranslations("auth.verify");
+  const t = useTranslations("layout.auth.verify");
 
   const { auth } = useAuth();
   const router = useRouter();
