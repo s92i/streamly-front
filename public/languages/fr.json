@@ -108,6 +108,43 @@
         "successMessage": "Mot de passe changé avec succès",
         "errorMessage": "Erreur lors de la définition du nouveau mot de passe"
       }
+    },
+    "dashboard": {
+      "settings": {
+        "header": {
+          "heading": "Paramètres",
+          "description": "Ici, vous pouvez gérer vos paramètres",
+          "profile": "Profil",
+          "account": "Compte",
+          "appearance": "Apparence",
+          "notifications": "Notifications",
+          "sessions": "Sessions"
+        },
+        "profile": {
+          "header": {
+            "heading": "Profil",
+            "description": "Personnalisez votre profil en modifiant votre avatar, vos informations personnelles et vos liens vers les réseaux sociaux. Mettez à jour vos informations afin que les autres utilisateurs puissent en apprendre davantage sur vous"
+          },
+          "avatar": {
+            "heading": "Image de profil",
+            "updateButton": "Mettre à jour l'image de profil",
+            "confirmModal": {
+              "heading": "Supprimer l'avatar",
+              "message": "Êtes-vous sûr de vouloir supprimer votre image de profil ? Cette action est irréversible"
+            },
+            "info": "Formats pris en charge : JPG, JPEG, PNG, WEBP ou GIF. Taille maximale : 10 Mo",
+            "successUpdateMessage": "Image de profil mise à jour avec succès",
+            "errorUpdateImage": "Erreur lors de la mise à jour de l'image de profil",
+            "successRemoveMessage": "Image de profil supprimée avec succès",
+            "errorRemoveMessage": "Erreur lors de la suppression de l'image de profil"
+          }
+        }
+      }
+    },
+    "components": {
+      "liveBadge": {
+        "text": "LIVE"
+      }
     }
   }
 }

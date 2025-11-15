@@ -1,0 +1,31 @@
+import { cva, type VariantProps } from "class-variance-authority";
+import { cn } from "@/utils/tw-merge";
+import { Check } from "lucide-react";
+
+const channelVerifiedSizes = cva("", {
+  variants: {
+    size: {
+      sm: "size-3",
+      default: "size-4",
+    },
+  },
+  defaultVariants: {
+    size: "default",
+  },
+});
+
+interface ChannelVerifiedProps
+  extends VariantProps<typeof channelVerifiedSizes> {}
+
+export function ChannelVerified({ size }: ChannelVerifiedProps) {
+  return (
+    <span
+      className={cn(
+        "flex items-center justify-center rounded-full bg-secondary p-1",
+        channelVerifiedSizes({ size })
+      )}
+    >
+      <Check className={cn("stroke-[4px] text-white")} />
+    </span>
+  );
+}

@@ -53,7 +53,7 @@ export function DashboardNav() {
   ];
 
   return (
-    <div className="space-y-2 px-2 pt-4 lg:pt-0">
+    <div className="space-y-2 px-2 pt-4 lg:pt-0 text-black dark:text-primary">
       {routes.map((route, index) => (
         <SidebarItem key={index} route={route} />
       ))}

@@ -33,7 +33,7 @@ export function Search() {
           onChange={(e) => setSearchTerm(e.target.value)}
           className="w-full rounded-full pl-4 pr-10 lg:w-[400px ]"
         />
-        <Button className="absolute right-0.5 h-9" type="submit">
+        <Button className="bg-secondary absolute right-0.5 h-9" type="submit">
           <SearchIcon className="absolute size-[18px]" />
         </Button>
       </form>
