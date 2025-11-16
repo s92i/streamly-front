@@ -137,6 +137,21 @@
             "errorUpdateImage": "Erreur lors de la mise à jour de l'image de profil",
             "successRemoveMessage": "Image de profil supprimée avec succès",
             "errorRemoveMessage": "Erreur lors de la suppression de l'image de profil"
+          },
+          "info": {
+            "heading": "Paramètres du profil",
+            "usernameLabel": "Nom d'utilisateur",
+            "usernamePlaceholder": "johndoe",
+            "usernameDescription": "C'est ainsi que les autres utilisateurs vous reconnaîtront",
+            "displayNameLabel": "Nom affiché",
+            "displayNamePlaceholder": "John Doe",
+            "displayNameDescription": "Vous pouvez utiliser des majuscules dans votre nom d'affichage comme vous le souhaitez",
+            "bioLabel": "À propos de moi",
+            "bioPlaceholder": "J'adore la programmation",
+            "bioDescription": "Les informations vous concernant ne doivent pas dépasser 300 caractères",
+            "successMessage": "Profil mis à jour avec succès",
+            "errorMessage": "Erreur lors de la mise à jour du profil",
+            "submitButton": "Enregistrer les modifications"
           }
         }
       }
@@ -144,6 +159,10 @@
     "components": {
       "liveBadge": {
         "text": "LIVE"
+      },
+      "confirmModal": {
+        "cancel": "Annuler",
+        "continue": "Confirmer"
       }
     }
   }
