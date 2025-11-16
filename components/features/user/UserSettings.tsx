@@ -9,6 +9,7 @@ import {
 import { ChangeAvatarForm } from "./profile/ChangeAvatarForm";
 import { ChangeInfoForm } from "./profile/ChangeInfoForm";
 import { SocialLinksForm } from "./profile/social-links-form/SocialLinksForm";
+import { ChangeEmailForm } from "./account/ChangeEmailForm";
 
 export function UserSettings() {
   const t = useTranslations("layout.dashboard.settings");
@@ -41,7 +42,15 @@ export function UserSettings() {
             <SocialLinksForm />
           </div>
         </TabsContent>
-        <TabsContent value="account"></TabsContent>
+        <TabsContent value="account">
+          <div className="mt-5 space-y-6">
+            <CustomHeading
+              title={t("account.header.heading")}
+              description={t("account.header.description")}
+            />
+            <ChangeEmailForm />
+          </div>
+        </TabsContent>
         <TabsContent value="appearance"></TabsContent>
         <TabsContent value="notifications"></TabsContent>
         <TabsContent value="sessions"></TabsContent>

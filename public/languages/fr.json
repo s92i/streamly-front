@@ -177,6 +177,65 @@
             "successReorderMessage": "Ordre des liens vers les réseaux sociaux modifié",
             "errorReorderMessage": "Erreur lors du changement de l'ordre des liens vers les réseaux sociaux"
           }
+        },
+        "account": {
+          "header": {
+            "heading": "Compte",
+            "description": "Gérez les paramètres de votre compte, y compris les changements d'accès, la sécurité et les options de désactivation",
+            "securityHeading": "Sécurité",
+            "securityDescription": "Configurez l'authentification à deux facteurs et le renouvellement automatique pour une meilleure protection de vos données",
+            "deactivationHeading": "Désactivation",
+            "deactivationDescription": "Si vous souhaitez désactiver temporairement ou définitivement votre compte, utilisez cette option. Soyez conscient des conséquences"
+          },
+          "email": {
+            "heading": "Adresse e-mail",
+            "emailLabel": "E-mail",
+            "emailDescription": "Entrez votre nouvelle adresse e-mail",
+            "submitButton": "Enregistrer",
+            "successMessage": "E-mail mis à jour avec succès",
+            "errorMessage": "Erreur lors de la mise à jour de l'email"
+          },
+          "password": {
+            "heading": "Mot de passe du compte",
+            "oldPasswordLabel": "Ancien mot de passe",
+            "oldPasswordDescription": "Saisissez votre ancien mot de passe pour vérifier votre identité avant de changer de mot de passe. Cela est nécessaire pour garantir la sécurité de votre compte",
+            "newPasswordLabel": "Nouveau mot de passe",
+            "newPasswordDescription": "Votre nouveau mot de passe doit comporter au moins 8 caractères. Il est recommandé d'utiliser des caractères spéciaux pour une sécurité accrue",
+            "submitButton": "Enregistrer",
+            "successMessage": "Mot de passe mis à jour avec succès",
+            "errorMessage": "Erreur lors de la mise à jour du mot de passe"
+          },
+          "twoFactor": {
+            "heading": "Authentification TOTP",
+            "description": "Améliorez la sécurité de votre compte en activant l'authentification TOTP. Cette couche supplémentaire de protection nécessite de saisir un code unique, rendant votre compte moins vulnérable aux accès non autorisés",
+            "enable": {
+              "trigger": "Activer",
+              "heading": "Activation du TOTP",
+              "qrInstructions": "Scannez le code QR pour ajouter le TOTP",
+              "secretCodeLabel": "Code secret : ",
+              "pinLabel": "Code PIN",
+              "pinDescription": "Veuillez saisir le code à 6 chiffres fourni par votre application d'authentification",
+              "submitButton": "Confirmer",
+              "successMessage": "Authentification TOTP activée",
+              "errorMessage": "Erreur lors de la vérification du code"
+            },
+            "disable": {
+              "trigger": "Désactiver",
+              "heading": "Voulez-vous vraiment désactiver le TOTP ?",
+              "message": "La désactivation de l'authentification TOTP rendra votre compte moins sécurisé. Voulez-vous vraiment continuer ?",
+              "successMessage": "Authentification TOTP désactivée",
+              "errorMessage": "Erreur lors de la désactivation"
+            }
+          },
+          "deactivation": {
+            "heading": "Désactivation du compte",
+            "description": "Après la désactivation de votre compte, vous ne pourrez plus vous connecter. Votre compte sera complètement supprimé après 7 jours. Jusqu’à cette date, vous pouvez contacter le support pour restaurer l’accès et débloquer votre compte",
+            "confirmModal": {
+              "heading": "Confirmation de la désactivation",
+              "message": "Êtes-vous sûr de vouloir désactiver votre compte ? L'accès ne pourra être rétabli que dans un délai de 7 jours"
+            },
+            "deactivateButton": "Désactiver"
+          }
         }
       }
     },
