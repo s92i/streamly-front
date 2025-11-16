@@ -152,6 +152,30 @@
             "successMessage": "Profil mis à jour avec succès",
             "errorMessage": "Erreur lors de la mise à jour du profil",
             "submitButton": "Enregistrer les modifications"
+          },
+          "socialLinks": {
+            "createForm": {
+              "heading": "Liens vers les réseaux sociaux",
+              "titleLabel": "Titre du lien",
+              "titlePlaceholder": "YouTube",
+              "titleDescription": "Texte du lien",
+              "urlLabel": "URL du lien",
+              "urlPlaceholder": "https://youtube.com/test",
+              "urlDescription": "Où mène ce lien ? Veuillez entrer l'URL complète, par exemple : https://youtube.com/test",
+              "submitButton": "Ajouter",
+              "successMessage": "Lien vers les réseaux sociaux ajouté avec succès",
+              "errorMessage": "Erreur lors de l'ajout du lien vers les réseaux sociaux"
+            },
+            "editForm": {
+              "cancelButton": "Annuler",
+              "submitButton": "Enregistrer",
+              "successUpdateMessage": "Lien vers les réseaux sociaux mis à jour avec succès",
+              "errorUpdateMessage": "Erreur lors de la mise à jour du lien vers les réseaux sociaux",
+              "successRemoveMessage": "Lien vers les réseaux sociaux supprimé avec succès",
+              "errorRemoveMessage": "Erreur lors de la suppression du lien vers les réseaux sociaux"
+            },
+            "successReorderMessage": "Ordre des liens vers les réseaux sociaux modifié",
+            "errorReorderMessage": "Erreur lors du changement de l'ordre des liens vers les réseaux sociaux"
           }
         }
       }

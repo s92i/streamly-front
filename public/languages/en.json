@@ -152,6 +152,30 @@
             "successMessage": "Profile updated successfully",
             "errorMessage": "Error updating profile",
             "submitButton": "Save Changes"
+          },
+          "socialLinks": {
+            "createForm": {
+              "heading": "Social Media Links",
+              "titleLabel": "Link Title",
+              "titlePlaceholder": "YouTube",
+              "titleDescription": "Link text",
+              "urlLabel": "Link URL",
+              "urlPlaceholder": "https://youtube.com/test",
+              "urlDescription": "Where does this link lead ? Please enter the full URL, e.g: https://youtube.com/test",
+              "submitButton": "Add",
+              "successMessage": "Social media link successfully added",
+              "errorMessage": "Error adding social media link"
+            },
+            "editForm": {
+              "cancelButton": "Cancel",
+              "submitButton": "Save",
+              "successUpdateMessage": "Social media link successfully updated",
+              "errorUpdateMessage": "Error updating social media link",
+              "successRemoveMessage": "Social media link successfully removed",
+              "errorRemoveMessage": "Error removing social media link"
+            },
+            "successReorderMessage": "Order of social media links changed",
+            "errorReorderMessage": "Error changing order of social media links"
           }
         }
       }

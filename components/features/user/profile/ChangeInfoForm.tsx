@@ -114,7 +114,6 @@ export function ChangeInfoForm() {
               </FormItem>
             )}
           />
-          <Separator />
           <div className="flex justify-end p-5">
             <Button
               className="cursor-pointer bg-secondary"
