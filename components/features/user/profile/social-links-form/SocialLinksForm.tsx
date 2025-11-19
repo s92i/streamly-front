@@ -23,7 +23,6 @@ import {
   FormLabel,
 } from "@/components/ui/common/Form";
 import { Input } from "@/components/ui/common/Input";
-import { Separator } from "@/components/ui/common/Separator";
 import { Button } from "@/components/ui/common/Button";
 import { SocialLinksList } from "./SocialLinksList";
 
@@ -82,7 +81,6 @@ export function SocialLinksForm() {
               </FormItem>
             )}
           />
-          <Separator />
           <FormField
             control={form.control}
             name="url"

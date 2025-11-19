@@ -10,7 +10,6 @@ import {
   FormLabel,
 } from "@/components/ui/common/Form";
 import { Input } from "@/components/ui/common/Input";
-import { Separator } from "@/components/ui/common/Separator";
 import { Skeleton } from "@/components/ui/common/Skeleton";
 import { Textarea } from "@/components/ui/common/TextArea";
 import { FormWrapper } from "@/components/ui/elements/FormWrapper";
@@ -78,7 +77,6 @@ export function ChangeInfoForm() {
               </FormItem>
             )}
           />
-          <Separator />
           <FormField
             control={form.control}
             name="displayName"
@@ -96,7 +94,6 @@ export function ChangeInfoForm() {
               </FormItem>
             )}
           />
-          <Separator />
           <FormField
             control={form.control}
             name="bio"

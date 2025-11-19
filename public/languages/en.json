@@ -107,6 +107,19 @@
         "submitButton": "Set new password",
         "successMessage": "Password successfully changed",
         "errorMessage": "Error when setting new password"
+      },
+      "deactivate": {
+        "heading": "Deactivate Account",
+        "backButtonLabel": "Go to Dashboard",
+        "pinLabel": "6-digit code",
+        "pinDescription": "A code has been sent to your email. If you enabled Telegram notifications, we sent the code there as well",
+        "emailLabel": "Email",
+        "emailDescription": "The email you used during registration",
+        "passwordLabel": "Password",
+        "passwordDescription": "The password you used during registration",
+        "submitButton": "Deactivate",
+        "successMessage": "You have successfully deactivated your account",
+        "errorMessage": "Deactivation error"
       }
     },
     "dashboard": {
@@ -234,7 +247,7 @@
               "heading": "Deactivation Confirmation",
               "message": "Are you sure you want to deactivate your account ? Access can only be restored within 7 days"
             },
-            "deactivateButton": "Deactivate"
+            "button": "Deactivate"
           }
         }
       }

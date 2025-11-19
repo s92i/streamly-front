@@ -10,7 +10,6 @@ import {
   FormLabel,
 } from "@/components/ui/common/Form";
 import { Input } from "@/components/ui/common/Input";
-import { Separator } from "@/components/ui/common/Separator";
 import { Skeleton } from "@/components/ui/common/Skeleton";
 import { FormWrapper } from "@/components/ui/elements/FormWrapper";
 import { useChangeEmailMutation } from "@/graphql/generated/output";
@@ -75,7 +74,6 @@ export function ChangeEmailForm() {
               </FormItem>
             )}
           />
-          <Separator />
           <div className="flex justify-end p-5">
             <Button
               className="cursor-pointer bg-secondary"

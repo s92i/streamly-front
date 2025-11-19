@@ -107,6 +107,19 @@
         "submitButton": "Définir le nouveau mot de passe",
         "successMessage": "Mot de passe changé avec succès",
         "errorMessage": "Erreur lors de la définition du nouveau mot de passe"
+      },
+      "deactivate": {
+        "heading": "Désactiver le compte",
+        "backButtonLabel": "Aller au tableau de bord",
+        "pinLabel": "Code à 6 chiffres",
+        "pinDescription": "Un code a été envoyé à votre adresse email. Si vous avez activé les notifications Telegram, nous avons également envoyé le code là-bas",
+        "emailLabel": "Email",
+        "emailDescription": "L'email que vous avez utilisé lors de l'inscription",
+        "passwordLabel": "Mot de passe",
+        "passwordDescription": "Le mot de passe que vous avez utilisé lors de l'inscription",
+        "submitButton": "Désactiver",
+        "successMessage": "Vous avez désactivé votre compte avec succès",
+        "errorMessage": "Erreur lors de la désactivation"
       }
     },
     "dashboard": {
@@ -234,7 +247,7 @@
               "heading": "Confirmation de la désactivation",
               "message": "Êtes-vous sûr de vouloir désactiver votre compte ? L'accès ne pourra être rétabli que dans un délai de 7 jours"
             },
-            "deactivateButton": "Désactiver"
+            "button": "Désactiver"
           }
         }
       }
