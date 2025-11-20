@@ -249,17 +249,28 @@
             },
             "button": "Désactiver"
           }
+        },
+        "appearance": {
+          "header": {
+            "heading": "Apparence",
+            "description": "Personnalisez l'apparence de l'interface du site web selon vos préférences. Choisissez un thème et une langue pour rendre votre expérience plus agréable"
+          },
+          "theme": {
+            "heading": "Changer de thème",
+            "description": "Vous pouvez choisir un thème sombre ou clair pour l'interface du site web",
+            "successMessage": "Le thème du site a été changé avec succès"
+          }
         }
       }
+    }
+  },
+  "components": {
+    "liveBadge": {
+      "text": "LIVE"
     },
-    "components": {
-      "liveBadge": {
-        "text": "LIVE"
-      },
-      "confirmModal": {
-        "cancel": "Annuler",
-        "continue": "Confirmer"
-      }
+    "confirmModal": {
+      "cancel": "Annuler",
+      "continue": "Confirmer"
     }
   }
 }

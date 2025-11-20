@@ -1,6 +1,9 @@
 "use client";
 
-import { useLoginUserMutation } from "@/graphql/generated/output";
+import {
+  useDeactivateAccountMutation,
+  useLoginUserMutation,
+} from "@/graphql/generated/output";
 import { loginSchema, type TypeLoginSchema } from "@/schemas/auth/login.schema";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useTranslations } from "next-intl";
@@ -27,58 +30,59 @@ import {
 } from "@/components/ui/common/InputOTP";
 import Link from "next/link";
 import { useAuth } from "@/hooks/useAuth";
+import {
+  deactivateSchema,
+  type TypeDeactivateSchema,
+} from "@/schemas/auth/deactivate.schema";
 
 export function DeactivateForm() {
-  const t = useTranslations("layout.auth.login");
+  const t = useTranslations("layout.auth.deactivate");
 
-  const { auth } = useAuth();
+  const { exit } = useAuth();
   const router = useRouter();
 
   const [showPassword, setShowPassword] = useState(false);
-  const [isShowTwoFactor, setIsShowTwoFactor] = useState(false);
+  const [isShowConfirm, setIsShowConfirm] = useState(false);
 
-  const form = useForm<TypeLoginSchema>({
-    resolver: zodResolver(loginSchema),
+  const form = useForm<TypeDeactivateSchema>({
+    resolver: zodResolver(deactivateSchema),
     defaultValues: {
-      login: "",
+      email: "",
       password: "",
     },
   });
 
-  const [login, { loading: isLoadingLogin }] = useLoginUserMutation({
-    onCompleted(data) {
-      const message = data.loginUser?.message;
-
-      if (message === "A code is required to complete authorization") {
-        setIsShowTwoFactor(true);
-      } else if (message === "Login successful") {
-        auth();
-        toast.success(t("successMessage"));
-        router.push("/dashboard/settings");
-      } else {
-        toast.error("Unexpected login response");
-      }
-    },
-    onError() {
-      toast.error(t("errorMessage"));
-    },
-  });
+  const [deactivate, { loading: isLoadingDeactivate }] =
+    useDeactivateAccountMutation({
+      onCompleted(data) {
+        if (data.deactivateAccount.message) {
+          setIsShowConfirm(true);
+        } else {
+          exit();
+          toast.success(t("successMessage"));
+          router.push("/");
+        }
+      },
+      onError() {
+        toast.error(t("errorMessage"));
+      },
+    });
 
   const { isValid } = form.formState;
 
-  function onSubmit(data: TypeLoginSchema) {
-    login({ variables: { data } });
+  function onSubmit(data: TypeDeactivateSchema) {
+    deactivate({ variables: { data } });
   }
 
   return (
     <AuthWrapper
       heading={t("heading")}
       backButtonLabel={t("backButtonLabel")}
-      backButtonHref="/account/create"
+      backButtonHref="/dashboard/settings"
     >
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="grid gap-y-3">
-          {isShowTwoFactor ? (
+          {isShowConfirm ? (
             <FormField
               control={form.control}
               name="pin"
@@ -105,18 +109,18 @@ export function DeactivateForm() {
             <>
               <FormField
                 control={form.control}
-                name="login"
+                name="email"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>{t("loginLabel")}</FormLabel>
+                    <FormLabel>{t("emailLabel")}</FormLabel>
                     <FormControl>
                       <Input
-                        placeholder="username"
+                        placeholder="test@test.com"
                         {...field}
-                        disabled={isLoadingLogin}
+                        disabled={isLoadingDeactivate}
                       />
                     </FormControl>
-                    <FormDescription>{t("loginDescription")}</FormDescription>
+                    <FormDescription>{t("emailDescription")}</FormDescription>
                   </FormItem>
                 )}
               />
@@ -125,22 +129,14 @@ export function DeactivateForm() {
                 name="password"
                 render={({ field }) => (
                   <FormItem>
-                    <div className="flex items-center justify-between">
-                      <FormLabel>{t("passwordLabel")}</FormLabel>
-                      <Link
-                        href="/account/recovery"
-                        className="ml-auto inline-block text-sm"
-                      >
-                        {t("forgotPassword")}
-                      </Link>
-                    </div>
+                    <FormLabel>{t("passwordLabel")}</FormLabel>
                     <FormControl>
                       <div className="relative">
                         <Input
                           placeholder="********"
                           type={showPassword ? "text" : "password"}
                           {...field}
-                          disabled={isLoadingLogin}
+                          disabled={isLoadingDeactivate}
                         />
                         <button
                           type="button"
@@ -150,7 +146,7 @@ export function DeactivateForm() {
                           aria-label={
                             showPassword ? "Hide password" : "Show password"
                           }
-                          disabled={isLoadingLogin}
+                          disabled={isLoadingDeactivate}
                         >
                           {showPassword ? (
                             <EyeOff className="size-5 text-muted-foreground" />
@@ -170,7 +166,7 @@ export function DeactivateForm() {
           )}
           <Button
             className="mt-2 w-full bg-secondary"
-            disabled={!isValid || isLoadingLogin}
+            disabled={!isValid || isLoadingDeactivate}
           >
             {t("submitButton")}
           </Button>
