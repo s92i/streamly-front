@@ -259,18 +259,29 @@
             "heading": "Changer de thème",
             "description": "Vous pouvez choisir un thème sombre ou clair pour l'interface du site web",
             "successMessage": "Le thème du site a été changé avec succès"
+          },
+          "language": {
+            "heading": "Langue du site web",
+            "description": "Sélectionnez la langue qui sera utilisée sur le site web",
+            "selectPlaceholder": "Sélectionnez une langue",
+            "successMessage": "La langue du site web a été changée avec succès",
+            "errorMessage": "Erreur lors du changement de la langue du site web"
+          },
+          "color": {
+            "heading": "Couleur d'accentuation",
+            "description": "Choisissez une couleur d'accentuation pour l'interface"
           }
         }
       }
-    }
-  },
-  "components": {
-    "liveBadge": {
-      "text": "LIVE"
     },
-    "confirmModal": {
-      "cancel": "Annuler",
-      "continue": "Confirmer"
+    "components": {
+      "liveBadge": {
+        "text": "LIVE"
+      },
+      "confirmModal": {
+        "cancel": "Annuler",
+        "continue": "Confirmer"
+      }
     }
   }
 }

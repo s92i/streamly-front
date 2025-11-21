@@ -14,6 +14,8 @@ import { ChangePasswordForm } from "./account/ChangePasswordForm";
 import { WrapperTotp } from "./account/totp/WrapperTotp";
 import { DeactivateCard } from "./account/DeactivateCard";
 import { ChangeThemeForm } from "./apperance/ChangeThemeForm";
+import { ChangeLanguageForm } from "./apperance/ChangeLanguageForm";
+import { ChangeColorForm } from "./apperance/ChangeColorForm";
 
 export function UserSettings() {
   const t = useTranslations("layout.dashboard.settings");
@@ -73,6 +75,8 @@ export function UserSettings() {
               description={t("appearance.header.description")}
             />
             <ChangeThemeForm />
+            <ChangeLanguageForm />
+            <ChangeColorForm />
           </div>
         </TabsContent>
         <TabsContent value="notifications"></TabsContent>

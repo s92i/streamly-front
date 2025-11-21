@@ -4,9 +4,11 @@ import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages } from "next-intl/server";
 
 import "./globals.css";
+import "@/styles/themes.css";
 import { ApolloClientProvider } from "@/providers/ApolloClientProvider";
 import { ThemeProvider } from "@/providers/ThemeProvider";
 import { ToastProvider } from "@/providers/ToastProvider";
+import { ColorSwitcher } from "@/components/ui/elements/ColorSwitcher";
 
 export const metadata: Metadata = {
   title: "Streamly – Watch Live Streams Instantly",
@@ -25,6 +27,7 @@ export default async function RootLayout({
   return (
     <html lang={locale} suppressHydrationWarning>
       <body className={GeistSans.variable}>
+        <ColorSwitcher />
         <ApolloClientProvider>
           <NextIntlClientProvider messages={messages}>
             <ThemeProvider

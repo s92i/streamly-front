@@ -1,7 +1,7 @@
 import { NextResponse, type NextRequest } from "next/server";
 
 export default function middleware(request: NextRequest) {
-  const { url, cookies, nextUrl } = request;
+  const { nextUrl } = request;
 
   const session = request.cookies.get("session")?.value;
 
