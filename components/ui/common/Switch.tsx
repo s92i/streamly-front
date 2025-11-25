@@ -1,7 +1,6 @@
 "use client";
 
 import * as SwitchPrimitive from "@radix-ui/react-switch";
-import { Sun, Moon } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 import type { ComponentProps } from "react";
@@ -20,12 +19,6 @@ function Switch({
       )}
       {...props}
     >
-      <span className="absolute left-1 pointer-events-none z-10 transition-opacity duration-200 opacity-100 data-[state=checked]:opacity-0">
-        <Sun className="size-4 text-yellow-500" />
-      </span>
-      <span className="absolute right-1 pointer-events-none z-10 transition-opacity duration-200 opacity-0 data-[state=checked]:opacity-100">
-        <Moon className="size-4 text-blue-400 dark:text-blue-300" />
-      </span>
       <SwitchPrimitive.Thumb
         data-slot="switch-thumb"
         className={cn(

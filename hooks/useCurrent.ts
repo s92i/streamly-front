@@ -15,7 +15,7 @@ export function useCurrent() {
 
   useEffect(() => {
     if (error) {
-      if (isAuthenticated) {
+      if (!isAuthenticated) {
         clear();
       }
       exit();

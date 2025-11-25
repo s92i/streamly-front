@@ -1,3 +1,4 @@
+import { LogoImage } from "@/components/images/LogoImage";
 import { Button } from "@/components/ui/common/Button";
 import {
   Card,
@@ -7,7 +8,6 @@ import {
   CardTitle,
   CardDescription,
 } from "@/components/ui/common/Card";
-import Image from "next/image";
 import Link from "next/link";
 import { PropsWithChildren, ReactNode } from "react";
 
@@ -26,22 +26,13 @@ export function AuthWrapper({
   description,
   backButtonLabel,
   backButtonHref,
-  logoUrl = "/images/logo.svg",
 }: PropsWithChildren<AuthWrapperProps>) {
   return (
     <div className="flex min-h-screen items-center justify-center bg-linear-to-br from-background via-muted/50 to-primary/10">
       <Card className="relative w-full max-w-md p-2 shadow-xl border border-muted-foreground/10 bg-white/10 backdrop-blur-[2px]">
         <CardHeader className="flex flex-col items-center mt-2 mb-2 gap-1">
           <div className="flex flex-row items-center justify-center w-full gap-2 mb-3">
-            <Image
-              src={logoUrl}
-              alt="Streamly"
-              width={48}
-              height={48}
-              className="rounded-lg bg-white shadow-md p-1 border border-muted"
-              priority
-              draggable={false}
-            />
+            <LogoImage />
             <CardTitle className="text-center text-2xl font-bold text-primary drop-shadow-sm mb-0">
               {heading}
             </CardTitle>

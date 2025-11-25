@@ -271,6 +271,22 @@
             "heading": "Couleur d'accentuation",
             "description": "Choisissez une couleur d'accentuation pour l'interface"
           }
+        },
+        "notifications": {
+          "header": {
+            "heading": "Notifications",
+            "description": "Configurez comment vous souhaitez recevoir les notifications de Streamly. Vous recevrez des notifications concernant le début des diffusions sur les chaînes auxquelles vous êtes abonné, ainsi que sur les nouvelles fonctionnalités"
+          },
+          "siteNotifications": {
+            "heading": "Notifications du site",
+            "description": "Si vous désactivez les notifications du site, vous ne recevrez pas de notifications concernant les nouveaux abonnés à votre chaîne ni au sujet des nouveaux lives"
+          },
+          "telegramNotifications": {
+            "heading": "Notifications Telegram",
+            "description": "Si vous activez les notifications via Telegram, votre compte Streamly sera lié à votre compte Telegram et vous recevrez des messages concernant les nouvelles souscriptions, nouveaux lives, réinitialisations de mot de passe et codes d’authentification à deux facteurs"
+          },
+          "successMessage": "Les paramètres de notification ont été mis à jour avec succès",
+          "errorMessage": "Erreur lors de la mise à jour des paramètres de notification"
         }
       }
     },

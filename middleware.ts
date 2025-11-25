@@ -18,7 +18,7 @@ export default function middleware(request: NextRequest) {
   }
 
   if (session && isAuthRoute && !isDeactivateRoute) {
-    return NextResponse.redirect(new URL("/dasboard/settings", request.url));
+    return NextResponse.redirect(new URL("/dashboard/settings", request.url));
   }
 
   return NextResponse.next();
