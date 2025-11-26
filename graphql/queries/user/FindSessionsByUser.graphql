@@ -1,5 +1,6 @@
 query FindSessionsByUser {
   findSessionsByUser {
+    id
     createdAt
     metadata {
       location {

@@ -287,6 +287,33 @@
           },
           "successMessage": "Les paramètres de notification ont été mis à jour avec succès",
           "errorMessage": "Erreur lors de la mise à jour des paramètres de notification"
+        },
+        "sessions": {
+          "header": {
+            "heading": "Sessions",
+            "description": "Les sessions sont les appareils que vous utilisez actuellement ou que vous avez utilisés pour accéder à votre compte Streamly. Ici, vous pouvez voir les sessions actives en ce moment."
+          },
+          "info": {
+            "current": "Session actuelle",
+            "active": "Sessions actives",
+            "notFound": "Aucune session active trouvée"
+          },
+          "sessionItem": {
+            "deleteButton": "Supprimer",
+            "detailsButton": "Détails",
+            "confirmModal": {
+              "heading": "Supprimer la session",
+              "message": "Êtes-vous sûr de vouloir supprimer cette session ? Cette action entraînera la suppression irréversible de la session sur cet appareil et mettra fin à toutes les actions actives qui y sont associées."
+            },
+            "successMessage": "Session supprimée"
+          },
+          "sessionModal": {
+            "heading": "Informations de la session",
+            "device": "Appareil:",
+            "location": "Localisation:",
+            "ipAddress": "Adresse IP:",
+            "createdAt": "Créé le:"
+          }
         }
       }
     },
@@ -297,6 +324,24 @@
       "confirmModal": {
         "cancel": "Annuler",
         "continue": "Confirmer"
+      }
+    },
+    "utils": {
+      "formatDate": {
+        "months": {
+          "january": "Janvier",
+          "february": "Février",
+          "march": "Mars",
+          "april": "Avril",
+          "may": "Mai",
+          "june": "Juin",
+          "july": "Juillet",
+          "august": "Août",
+          "september": "Septembre",
+          "october": "Octobre",
+          "november": "Novembre",
+          "december": "Décembre"
+        }
       }
     }
   }
