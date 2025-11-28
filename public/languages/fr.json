@@ -315,6 +315,58 @@
             "createdAt": "Créé le:"
           }
         }
+      },
+      "keys": {
+        "header": {
+          "heading": "Clés de Stream",
+          "description": "Générez une URL et une clé pour diffuser"
+        },
+        "url": {
+          "heading": "URL"
+        },
+        "key": {
+          "heading": "Clé de Stream"
+        },
+        "instructionModal": {
+          "trigger": "Instructions",
+          "heading": "🛠 Guide de configuration OBS pour le live 🛠",
+          "description": "Pour commencer à partager votre contenu avec votre audience, suivez ce guide étape par étape pour connecter OBS Studio. Quelques étapes et vous êtes prêt à diffuser en direct",
+          "step1Title": "🔑 Étape 1 : Téléchargez OBS Studio et générez l'URL du serveur et la clé de stream",
+          "step1Description": "Pour commencer à diffuser, il vous faut deux éléments clés : l’URL du serveur et la clé de stream. Suivez ces étapes :",
+          "downloadObs": "Télécharger OBS Studio",
+          "downloadObsDescription": "Avant de configurer votre diffusion, téléchargez et installez le programme",
+          "obsLinkText": "OBS Studio",
+          "copyKeys": "Copier l'URL du serveur et la clé de stream",
+          "copyKeysDescription": "Une fois générées, vous verrez deux champs : l’URL du serveur et la clé de stream. Cliquez sur les icônes de copie à côté de chaque champ pour les sauvegarder dans votre presse-papiers",
+          "step2Title": "🎛️ Étape 2 : Configurez OBS Studio",
+          "step2Description": "Maintenant que vous avez les données requises, configurons OBS pour fonctionner avec votre stream :",
+          "openObs": "Ouvrir OBS Studio",
+          "openObsDescription": "Si OBS n'est pas encore installé, téléchargez-le depuis le site officiel et installez-le. Une fois lancé, la page principale d’OBS s’ouvrira",
+          "openStreamSettings": "Ouvrir les paramètres de flux",
+          "openStreamSettingsDescription": "Dans le menu du haut, cliquez sur « Fichier » -> « Paramètres » -> allez dans l’onglet « Flux »",
+          "enterDetails": "Entrer vos informations",
+          "enterDetailsDescription": "Dans le champ « Service », sélectionnez « Personnalisé... ». Collez l’URL du serveur précédemment copiée dans le champ « URL ». Dans le champ « Clé de stream », entrez votre clé de stream",
+          "saveSettings": "Enregistrer les paramètres",
+          "saveSettingsDescription": "Cliquez sur « Appliquer » puis sur « OK » pour enregistrer les changements",
+          "step3Title": "🚀 Étape 3 : Commencez à diffuser",
+          "step3Description": "Après avoir correctement configuré OBS, vous êtes prêt à lancer une diffusion en direct :",
+          "startStream": "Démarrer le stream",
+          "startStreamDescription": "Revenez à l’écran principal d’OBS et cliquez sur le bouton « Démarrer le stream »",
+          "monitorStream": "Surveillez votre diffusion",
+          "monitorStreamDescription": "Votre diffusion commencera en temps réel et vous pourrez la surveiller à la fois sur la plateforme et dans OBS",
+          "congrats": "✨ Félicitations ! Vous avez configuré OBS avec succès pour diffuser sur notre plateforme. Votre audience attend de nouveaux moments passionnants et du contenu 🎉",
+          "close": "Fermer"
+        },
+        "createModal": {
+          "trigger": "Générer des clés",
+          "heading": "Générer des clés",
+          "ingressTypeLabel": "Type de connexion",
+          "ingressTypePlaceholder": "Sélectionnez le type de connexion",
+          "ingressTypeDescription": "Sélectionnez RTMP pour une diffusion classique ou WHIP pour des connexions WebRTC",
+          "submitButton": "Générer",
+          "successMessage": "Flux créé",
+          "errorMessage": "Erreur lors de la création du flux"
+        }
       }
     },
     "components": {
@@ -324,6 +376,9 @@
       "confirmModal": {
         "cancel": "Annuler",
         "continue": "Confirmer"
+      },
+      "copyButton": {
+        "successMessage": "Copiée"
       }
     },
     "utils": {

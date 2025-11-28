@@ -1,8 +1,8 @@
 import { cva, type VariantProps } from "class-variance-authority";
 import { FindProfileQuery } from "@/graphql/generated/output";
 import { Avatar, AvatarFallback, AvatarImage } from "../common/Avatar";
-import { cn } from "@/utils/tw-merge";
 import { constructUrl } from "@/utils/construct-urls";
+import { cn } from "@/lib/utils";
 
 const avatarSizes = cva("", {
   variants: {

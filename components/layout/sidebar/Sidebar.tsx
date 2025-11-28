@@ -1,11 +1,11 @@
 "use client";
 
 import { useSidebar } from "@/hooks/useSidebar";
-import { cn } from "@/utils/tw-merge";
 import { SidebarHeader } from "./SidebarHeader";
 import { usePathname } from "next/navigation";
 import { DashboardNav } from "./DashboardNav";
 import { UserNav } from "./UserNav";
+import { cn } from "@/lib/utils";
 
 export function Sidebar() {
   const { isCollapsed } = useSidebar();

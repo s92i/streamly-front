@@ -5,8 +5,8 @@ import { Route } from "./route.interface";
 import { useSidebar } from "@/hooks/useSidebar";
 import { Hint } from "@/components/ui/elements/Hint";
 import { Button } from "@/components/ui/common/Button";
-import { cn } from "@/utils/tw-merge";
 import Link from "next/link";
+import { cn } from "@/lib/utils";
 
 interface SidebarItemProps {
   route: Route;

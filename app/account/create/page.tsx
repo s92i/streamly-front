@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const t = await getTranslations("auth.register");
+  const t = await getTranslations("layout.auth.register");
 
   return {
     title: t("heading"),

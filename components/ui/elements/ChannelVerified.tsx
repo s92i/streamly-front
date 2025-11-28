@@ -1,5 +1,5 @@
+import { cn } from "@/lib/utils";
 import { cva, type VariantProps } from "class-variance-authority";
-import { cn } from "@/utils/tw-merge";
 import { Check } from "lucide-react";
 
 const channelVerifiedSizes = cva("", {

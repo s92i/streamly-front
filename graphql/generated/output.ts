@@ -581,7 +581,7 @@ export type UserModel = {
   notifications: Array<NotificationModel>;
   password: Scalars['String']['output'];
   socialLinks: Array<SocialLinkModel>;
-  stream: StreamModel;
+  stream?: Maybe<StreamModel>;
   telegramId?: Maybe<Scalars['String']['output']>;
   totpSecret?: Maybe<Scalars['String']['output']>;
   updatedAt: Scalars['DateTime']['output'];
@@ -638,6 +638,13 @@ export type VerifyAccountMutationVariables = Exact<{
 
 
 export type VerifyAccountMutation = { __typename?: 'Mutation', verifyAccount: { __typename?: 'UserModel', isEmailVerified: boolean } };
+
+export type CreateIngressMutationVariables = Exact<{
+  ingressType: Scalars['Float']['input'];
+}>;
+
+
+export type CreateIngressMutation = { __typename?: 'Mutation', createIngress: boolean };
 
 export type ChangeEmailMutationVariables = Exact<{
   data: ChangeEmailInput;
@@ -737,12 +744,12 @@ export type FindChannelByUsernameQueryVariables = Exact<{
 }>;
 
 
-export type FindChannelByUsernameQuery = { __typename?: 'Query', findChannelByUsername: { __typename?: 'UserModel', username: string, avatar?: string | null, displayName: string, stream: { __typename?: 'StreamModel', title: string } } };
+export type FindChannelByUsernameQuery = { __typename?: 'Query', findChannelByUsername: { __typename?: 'UserModel', username: string, avatar?: string | null, displayName: string, stream?: { __typename?: 'StreamModel', title: string } | null } };
 
 export type FindRecommendedChannelsQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type FindRecommendedChannelsQuery = { __typename?: 'Query', findRecommendedChannels: Array<{ __typename?: 'UserModel', username: string, avatar?: string | null, isVerified: boolean, stream: { __typename?: 'StreamModel', isLive: boolean } }> };
+export type FindRecommendedChannelsQuery = { __typename?: 'Query', findRecommendedChannels: Array<{ __typename?: 'UserModel', username: string, avatar?: string | null, isVerified: boolean, stream?: { __typename?: 'StreamModel', isLive: boolean } | null }> };
 
 export type FindCurrentSessionQueryVariables = Exact<{ [key: string]: never; }>;
 
@@ -762,7 +769,7 @@ export type FindNotificationsUnreadCountQuery = { __typename?: 'Query', findNoti
 export type FindProfileQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type FindProfileQuery = { __typename?: 'Query', findProfile: { __typename?: 'UserModel', username: string, displayName: string, email: string, avatar?: string | null, bio?: string | null, isTotpEnabled: boolean, notificationSettings?: { __typename?: 'NotificationsSettingsModel', siteNotifications: boolean, telegramNotifications: boolean } | null } };
+export type FindProfileQuery = { __typename?: 'Query', findProfile: { __typename?: 'UserModel', username: string, displayName: string, email: string, avatar?: string | null, bio?: string | null, isTotpEnabled: boolean, notificationSettings?: { __typename?: 'NotificationsSettingsModel', siteNotifications: boolean, telegramNotifications: boolean } | null, stream?: { __typename?: 'StreamModel', serverUrl?: string | null, streamKey?: string | null } | null } };
 
 export type FindSessionsByUserQueryVariables = Exact<{ [key: string]: never; }>;
 
@@ -1008,6 +1015,37 @@ export function useVerifyAccountMutation(baseOptions?: Apollo.MutationHookOption
 export type VerifyAccountMutationHookResult = ReturnType<typeof useVerifyAccountMutation>;
 export type VerifyAccountMutationResult = Apollo.MutationResult<VerifyAccountMutation>;
 export type VerifyAccountMutationOptions = Apollo.BaseMutationOptions<VerifyAccountMutation, VerifyAccountMutationVariables>;
+export const CreateIngressDocument = gql`
+    mutation CreateIngress($ingressType: Float!) {
+  createIngress(ingressType: $ingressType)
+}
+    `;
+export type CreateIngressMutationFn = Apollo.MutationFunction<CreateIngressMutation, CreateIngressMutationVariables>;
+
+/**
+ * __useCreateIngressMutation__
+ *
+ * To run a mutation, you first call `useCreateIngressMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useCreateIngressMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [createIngressMutation, { data, loading, error }] = useCreateIngressMutation({
+ *   variables: {
+ *      ingressType: // value for 'ingressType'
+ *   },
+ * });
+ */
+export function useCreateIngressMutation(baseOptions?: Apollo.MutationHookOptions<CreateIngressMutation, CreateIngressMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useMutation<CreateIngressMutation, CreateIngressMutationVariables>(CreateIngressDocument, options);
+      }
+export type CreateIngressMutationHookResult = ReturnType<typeof useCreateIngressMutation>;
+export type CreateIngressMutationResult = Apollo.MutationResult<CreateIngressMutation>;
+export type CreateIngressMutationOptions = Apollo.BaseMutationOptions<CreateIngressMutation, CreateIngressMutationVariables>;
 export const ChangeEmailDocument = gql`
     mutation ChangeEmail($data: ChangeEmailInput!) {
   changeEmail(data: $data)
@@ -1678,6 +1716,10 @@ export const FindProfileDocument = gql`
     notificationSettings {
       siteNotifications
       telegramNotifications
+    }
+    stream {
+      serverUrl
+      streamKey
     }
   }
 }
