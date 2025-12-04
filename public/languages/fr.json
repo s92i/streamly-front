@@ -446,6 +446,21 @@
           "successMessage": "Forfait supprimé avec succès",
           "errorMessage": "Erreur lors de la suppression du forfait"
         }
+      },
+      "transactions": {
+        "header": {
+          "heading": "Transactions",
+          "description": "Voici les transactions liées au parrainage de la chaîne"
+        },
+        "columns": {
+          "date": "Date de création",
+          "status": "Statut",
+          "success": "Réussie",
+          "pending": "En attente",
+          "failed": "Échouée",
+          "expired": "Expirée",
+          "amount": "Montant"
+        }
       }
     },
     "components": {
