@@ -55,13 +55,16 @@ export function FollowersTable() {
       cell: ({ row }) => (
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <Button variant="ghost" className="size-8 p-0">
+            <Button
+              variant="ghost"
+              className="size-8 p-0 hover:bg-muted hover:text-primary transition-colors duration-150"
+            >
               <MoreHorizontal className="size-4" />
             </Button>
           </DropdownMenuTrigger>
-          <DropdownMenuContent className="bg-primary">
+          <DropdownMenuContent className="text-white">
             <Link href={`/${row.original.follower.username}`} target="_blank">
-              <DropdownMenuItem className="cursor-pointer">
+              <DropdownMenuItem className="text-white focus:text-gray-100 cursor-pointer hover:bg-gray-50/20 hover:text-gray-100 transition-colors duration-150">
                 <User className="mr-2 size-4" />
                 {t("columns.viewChannel")}
               </DropdownMenuItem>

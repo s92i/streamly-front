@@ -399,6 +399,53 @@
           "actions": "Actions",
           "viewChannel": "Voir la chaîne"
         }
+      },
+      "sponsors": {
+        "header": {
+          "heading": "Sponsors",
+          "description": "Voici la liste de tous vos sponsors"
+        },
+        "columns": {
+          "date": "Date d'expiration",
+          "user": "Utilisateur",
+          "plan": "Forfait",
+          "actions": "Actions",
+          "viewChannel": "Voir la chaîne"
+        }
+      },
+      "plans": {
+        "header": {
+          "heading": "Forfaits Premium",
+          "description": "Voici la liste des forfaits premium pour votre chaîne"
+        },
+        "alert": {
+          "heading": "Vérification de la chaîne requise",
+          "description": "Pour créer des forfaits premium, votre chaîne doit être vérifiée. Il vous suffit de 10 abonnés pour obtenir la coche de vérification et accéder à cette fonctionnalité"
+        },
+        "createForm": {
+          "trigger": "Créer un forfait",
+          "heading": "Créer un forfait",
+          "titleLabel": "Titre",
+          "titlePlaceholder": "Abonnement premium pour la chaîne",
+          "titleDescription": "Entrez le nom de votre forfait. Ce nom sera affiché à vos abonnés",
+          "descriptionLabel": "Description",
+          "descriptionPlaceholder": "Décrivez ce que comprend votre forfait",
+          "descriptionDescription": "Décrivez ce que comprend votre forfait. Cela aidera vos abonnés à comprendre les avantages de l'abonnement",
+          "priceLabel": "Prix",
+          "priceDescription": "Indiquez le prix de votre forfait en devise. C'est le montant que les utilisateurs paieront pour l'abonnement",
+          "submitButton": "Créer",
+          "successMessage": "Forfait premium créé",
+          "errorMessage": "Erreur lors de la création du forfait"
+        },
+        "columns": {
+          "date": "Date de création",
+          "title": "Titre",
+          "price": "Prix",
+          "actions": "Actions",
+          "remove": "Supprimer",
+          "successMessage": "Forfait supprimé avec succès",
+          "errorMessage": "Erreur lors de la suppression du forfait"
+        }
       }
     },
     "components": {
