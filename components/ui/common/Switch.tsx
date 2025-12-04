@@ -14,7 +14,7 @@ function Switch({
       data-slot="switch"
       className={cn(
         "relative cursor-pointer peer inline-flex h-6 w-12 shrink-0 items-center rounded-full border border-transparent shadow-xs transition-all outline-none disabled:cursor-not-allowed disabled:opacity-50",
-        "bg-gray-300 dark:bg-gray-100",
+        "bg-primary dark:bg-primary dark:data-[state=unchecked]:bg-red-500 data-[state=unchecked]:bg-red-500",
         className
       )}
       {...props}

@@ -367,6 +367,38 @@
           "successMessage": "Flux créé",
           "errorMessage": "Erreur lors de la création du flux"
         }
+      },
+      "chat": {
+        "header": {
+          "heading": "Paramètres du chat",
+          "description": "Ici, vous pouvez gérer les paramètres de votre chat"
+        },
+        "isChatEnabled": {
+          "heading": "Activer le chat",
+          "description": "Si vous activez le chat, les spectateurs pourront envoyer des messages dans le chat pendant votre diffusion"
+        },
+        "isChatFollowersOnly": {
+          "heading": "Chat réservé aux abonnés",
+          "description": "Si vous activez ce paramètre, seuls vos abonnés pourront envoyer des messages dans le chat"
+        },
+        "isChatPremiumFollowersOnly": {
+          "heading": "Chat réservé aux abonnés premium",
+          "description": "Si vous activez ce paramètre, seuls les abonnés premium pourront envoyer des messages dans le chat"
+        },
+        "successMessage": "Paramètres du chat mis à jour avec succès",
+        "errorMessage": "Erreur lors de la mise à jour des paramètres du chat"
+      },
+      "followers": {
+        "header": {
+          "heading": "Abonnés",
+          "description": "Voici la liste de tous vos abonnés"
+        },
+        "columns": {
+          "date": "Date",
+          "user": "Utilisateur",
+          "actions": "Actions",
+          "viewChannel": "Voir la chaîne"
+        }
       }
     },
     "components": {
@@ -379,6 +411,9 @@
       },
       "copyButton": {
         "successMessage": "Copiée"
+      },
+      "dataTable": {
+        "notFound": "Aucun résultat"
       }
     },
     "utils": {

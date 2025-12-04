@@ -6,13 +6,16 @@ query FindProfile {
     avatar
     bio
     isTotpEnabled
-    notificationSettings {
+    notificationsSettings {
       siteNotifications
       telegramNotifications
     }
     stream {
       serverUrl
       streamKey
+      isChatEnabled
+      isChatFollowersOnly
+      isChatPremiumFollowersOnly
     }
   }
 }

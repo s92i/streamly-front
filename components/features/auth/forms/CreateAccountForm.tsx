@@ -133,9 +133,9 @@ export function CreateAccountForm() {
                         disabled={isLoadingCreate}
                       >
                         {showPassword ? (
-                          <EyeOff className="size-5 text-muted-foreground" />
+                          <EyeOff className="size-5 text-muted-foreground cursor-pointer" />
                         ) : (
-                          <Eye className="size-5 text-muted-foreground" />
+                          <Eye className="size-5 text-muted-foreground cursor-pointer" />
                         )}
                       </button>
                     </div>

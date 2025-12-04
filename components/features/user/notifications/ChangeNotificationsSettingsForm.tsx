@@ -24,9 +24,10 @@ export function ChangeNotificationsSettingsForm() {
   const form = useForm<TypeChangeNotificationsSettingsSchema>({
     resolver: zodResolver(changeNotificationsSettingsSchema),
     values: {
-      siteNotifications: user?.notificationSettings?.siteNotifications ?? false,
+      siteNotifications:
+        user?.notificationsSettings?.siteNotifications ?? false,
       telegramNotifications:
-        user?.notificationSettings?.telegramNotifications ?? false,
+        user?.notificationsSettings?.telegramNotifications ?? false,
     },
   });
 
