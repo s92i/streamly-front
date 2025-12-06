@@ -56,6 +56,16 @@
       "streamsHeading": "Chaînes que vous pourriez aimer",
       "categoriesHeading": "Catégories que vous pourriez aimer"
     },
+    "categories": {
+      "heading": "Catégories",
+      "overview": {
+        "heading": "Streams pour cette catégorie"
+      }
+    },
+    "streams": {
+      "heading": "Streams",
+      "searchHeading": "Recherche par requête"
+    },
     "auth": {
       "register": {
         "heading": "Inscription sur Streamly",
