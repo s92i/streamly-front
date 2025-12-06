@@ -52,6 +52,10 @@
         }
       }
     },
+    "home": {
+      "streamsHeading": "Chaînes que vous pourriez aimer",
+      "categoriesHeading": "Catégories que vous pourriez aimer"
+    },
     "auth": {
       "register": {
         "heading": "Inscription sur Streamly",
@@ -476,6 +480,10 @@
       },
       "dataTable": {
         "notFound": "Aucun résultat"
+      },
+      "emptyState": {
+        "heading": "Aucun résultat",
+        "text": "Nous avons cherché dans tous les recoins de notre site, mais malheureusement rien n'a été trouvé pour votre demande. Peut-être pourriez-vous essayer autre chose ?"
       }
     },
     "utils": {
