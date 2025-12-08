@@ -1,5 +1,6 @@
 query FindProfile {
   findProfile {
+    id
     username
     displayName
     email
@@ -14,6 +15,7 @@ query FindProfile {
     stream {
       serverUrl
       streamKey
+      isLive
       isChatEnabled
       isChatFollowersOnly
       isChatPremiumFollowersOnly

@@ -66,6 +66,70 @@
       "heading": "Streams",
       "searchHeading": "Recherche par requête"
     },
+    "stream": {
+      "video": {
+        "offline": "est hors ligne",
+        "loading": "Connexion...",
+        "player": {
+          "volume": "Volume",
+          "fullscreen": {
+            "open": "Plein écran",
+            "exit": "Quitter le plein écran"
+          }
+        }
+      },
+      "info": {
+        "viewers": "spectateurs",
+        "offline": "Hors ligne"
+      },
+      "actions": {
+        "follow": {
+          "confirmUnfollowHeading": "Se désabonner",
+          "confirmUnfollowMessage": "Vous ne recevrez plus de notifications de cette chaîne et elle disparaîtra de votre liste de suivis",
+          "unfollowButton": "Se désabonner",
+          "followButton": "S'abonner",
+          "successFollowMessage": "Vous vous êtes abonné(e) avec succès",
+          "errorFollowMessage": "Erreur lors de l'abonnement",
+          "successUnfollowMessage": "Vous vous êtes désabonné(e) avec succès",
+          "errorUnfollowMessage": "Erreur lors de la désinscription"
+        },
+        "support": {
+          "alreadySponsor": "Vous êtes déjà sponsor",
+          "supportAuthor": "Soutenir l'auteur",
+          "perMonth": "par mois",
+          "choose": "Choisir",
+          "errorMessage": "Erreur lors de la création du paiement"
+        },
+        "share": {
+          "heading": "Partager"
+        }
+      },
+      "aboutChannel": {
+        "heading": "À propos",
+        "followersCount": "abonnés",
+        "noDescription": "Aucune description fournie"
+      },
+      "sponsors": {
+        "heading": "Sponsors de la chaîne"
+      },
+      "chat": {
+        "heading": "Chat",
+        "unavailable": "Chat indisponible",
+        "unavailableMessage": "Le chat est indisponible tant qu'il n'y a pas de stream sur la chaîne. Veuillez revenir plus tard",
+        "loading": "Connexion...",
+        "info": {
+          "authRequired": "Autorisation requise",
+          "chatDisabled": "Chat désactivé",
+          "premiumFollowersOnly": "Réservé aux sponsors",
+          "followersOnly": "Réservé aux abonnés"
+        },
+        "sendMessage": {
+          "placeholder": "Envoyer un message",
+          "emojiPlaceholder": "Rechercher",
+          "errorMessage": "Erreur lors de l'envoi du message"
+        }
+      }
+    },
     "auth": {
       "register": {
         "heading": "Inscription sur Streamly",

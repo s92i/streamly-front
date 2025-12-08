@@ -21,11 +21,16 @@ export function ChannelVerified({ size }: ChannelVerifiedProps) {
   return (
     <span
       className={cn(
-        "flex items-center justify-center rounded-full bg-secondary p-1",
+        "flex items-center justify-center rounded-full bg-secondary",
         channelVerifiedSizes({ size })
       )}
     >
-      <Check className={cn("stroke-[4px] text-white")} />
+      <Check
+        className={cn(
+          "stroke-[4px] p-[3px] text-white",
+          size === "sm" ? "size-[20px]" : "size-[11px]"
+        )}
+      />
     </span>
   );
 }
