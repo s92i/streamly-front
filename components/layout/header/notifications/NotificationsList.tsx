@@ -9,6 +9,15 @@ import { useTranslations } from "next-intl";
 import { Fragment } from "react/jsx-runtime";
 import parse from "html-react-parser";
 
+function fixMalformedHtml(html: string) {
+  return html
+    .replace(/className=/g, "class=")
+    .replace(/href='([^']+)\s+class=/g, "href='$1' class=")
+    .replace(/'\)/g, "'")
+    .replace(/\)\>/g, ">")
+    .replace(/'([^']*)'([^a-zA-Z0-9>])/g, "'$1'$2");
+}
+
 export function NotificationsList() {
   const t = useTranslations(
     "layout.header.headerMenu.profileMenu.notifications"
@@ -43,7 +52,7 @@ export function NotificationsList() {
                 <div className="rounded-full bg-foreground p-2">
                   <Icon className="size-6 text-secondary" />
                 </div>
-                <div>{parse(notification.message)}</div>
+                <div>{parse(fixMalformedHtml(notification.message))}</div>
               </div>
               {index < notifications.length - 1 && (
                 <Separator className="my-3" />

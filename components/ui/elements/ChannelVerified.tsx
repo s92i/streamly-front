@@ -28,7 +28,7 @@ export function ChannelVerified({ size }: ChannelVerifiedProps) {
       <Check
         className={cn(
           "stroke-[4px] p-[3px] text-white",
-          size === "sm" ? "size-[20px]" : "size-[11px]"
+          size === "sm" ? "size-4" : "size-4"
         )}
       />
     </span>

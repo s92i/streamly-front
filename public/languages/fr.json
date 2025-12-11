@@ -130,6 +130,19 @@
         }
       }
     },
+    "success": {
+      "heading": "Paiement réussi",
+      "details": {
+        "heading": "Détails du parrainage :",
+        "price": "Prix :",
+        "duration": "Durée :",
+        "channel": "Chaîne"
+      },
+      "congratulations": "Vous avez maintenant accès au contenu premium de la chaîne",
+      "backToHome": "Retour à l'accueil",
+      "backToChannel": "Retour à la chaîne",
+      "support": "Si vous avez des questions, contactez notre support"
+    },
     "auth": {
       "register": {
         "heading": "Inscription sur Streamly",
