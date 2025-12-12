@@ -31,7 +31,7 @@ export function OfflineStream({ channel }: OfflineStreamProps) {
         <div className="absolute inset-0 z-0 rounded-lg bg-black opacity-60" />
       )}
       <WifiOff className="z-10 size-12 text-muted-foreground" />
-      <p className="z-10 text-lg text-white mt-3">
+      <p className="z-10 text-lg dark:text-white text-black mt-3">
         {channel.displayName} {t("offline")}
       </p>
     </Card>

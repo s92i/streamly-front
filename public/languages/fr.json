@@ -107,6 +107,7 @@
       "aboutChannel": {
         "heading": "À propos",
         "followersCount": "abonnés",
+        "followersCountSingular": "abonné",
         "noDescription": "Aucune description fournie"
       },
       "sponsors": {

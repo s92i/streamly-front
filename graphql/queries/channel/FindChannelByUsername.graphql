@@ -6,10 +6,18 @@ query FindChannelByUsername($username: String!) {
     avatar
     bio
     isVerified
+    socialLinks {
+      title
+      url
+    }
     stream {
+      id
       title
       thumbnailUrl
       isLive
+      isChatEnabled
+      isChatFollowersOnly
+      isChatPremiumFollowersOnly
       category {
         title
       }
@@ -19,6 +27,9 @@ query FindChannelByUsername($username: String!) {
       title
       description
       price
+    }
+    followings {
+      id
     }
   }
 }

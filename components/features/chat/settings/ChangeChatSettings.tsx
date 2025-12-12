@@ -11,7 +11,7 @@ import { useCurrent } from "@/hooks/useCurrent";
 import {
   changeChatSettingsSchema,
   type TypeChangeChatSettingsSchema,
-} from "@/schemas/stream/change-chat-settings.schema";
+} from "@/schemas/chat/change-chat-settings.schema";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useTranslations } from "next-intl";
 import { useForm } from "react-hook-form";
