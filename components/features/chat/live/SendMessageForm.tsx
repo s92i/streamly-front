@@ -71,7 +71,7 @@ export function SendMessageForm({ channel, isDisabled }: SendMessageFormProps) {
                     <Textarea
                       {...field}
                       rows={1}
-                      disabled={isDisabled}
+                      disabled={isDisabled || isLoadingSend}
                       placeholder={t("placeholder")}
                       className="
                         min-h-[42px] max-h-[200px] resize-none overflow-hidden flex-1
@@ -91,7 +91,7 @@ export function SendMessageForm({ channel, isDisabled }: SendMessageFormProps) {
                     <Button
                       size="lgIcon"
                       type="submit"
-                      disabled={isDisabled || !isValid}
+                      disabled={isDisabled || !isValid || isLoadingSend}
                       className="mb-0.5"
                     >
                       <SendHorizonal className="size-4" />
@@ -102,7 +102,7 @@ export function SendMessageForm({ channel, isDisabled }: SendMessageFormProps) {
                       onChange={(emoji: string) =>
                         field.onChange(`${field.value} ${emoji}`)
                       }
-                      isDisabled={isDisabled}
+                      isDisabled={isDisabled || isLoadingSend}
                     />
                   </div>
                 </div>

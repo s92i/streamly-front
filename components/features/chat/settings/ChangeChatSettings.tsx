@@ -104,7 +104,7 @@ export function ChangeChatSettings() {
                   onChange={(value) =>
                     onChange("isChatPremiumFollowersOnly", value)
                   }
-                  isDisabled={isLoadingUpdate}
+                  isDisabled={isLoadingUpdate || !user?.isVerified}
                 />
               )}
             />

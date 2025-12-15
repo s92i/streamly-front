@@ -24,7 +24,9 @@ export function ChannelSponsors({ channel }: ChannelSponsorsProps) {
       channelId: channel.id,
     },
   });
-  const sponsors = data?.findSponsorsByChannel ?? [];
+  const sponsors = (data?.findSponsorsByChannel ?? []).filter(
+    (sponsor) => sponsor.user.id !== channel.id
+  );
 
   if (!sponsors.length || isLoadingSponsors) return null;
 

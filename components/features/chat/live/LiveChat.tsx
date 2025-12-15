@@ -5,7 +5,11 @@ import {
   CardTitle,
 } from "@/components/ui/common/Card";
 import { Skeleton } from "@/components/ui/common/Skeleton";
-import type { FindChannelByUsernameQuery } from "@/graphql/generated/output";
+import {
+  useFindMyFollowingsQuery,
+  useFindSponsorsByChannelQuery,
+  type FindChannelByUsernameQuery,
+} from "@/graphql/generated/output";
 import { useAuth } from "@/hooks/useAuth";
 import {
   useConnectionState,
@@ -16,6 +20,9 @@ import { MessageSquareOff } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { LoadingChat } from "./LoadingChat";
 import { SendMessageForm } from "./SendMessageForm";
+import { MessagesList } from "./MessagesList";
+import { ChatInfo } from "./ChatInfo";
+import { useCurrent } from "@/hooks/useCurrent";
 
 interface LiveChatProps {
   channel: FindChannelByUsernameQuery["findChannelByUsername"];
@@ -33,14 +40,45 @@ export function LiveChat({
   const t = useTranslations("layout.stream.chat");
 
   const { isAuthenticated } = useAuth();
+  const { user, isLoadingProfile } = useCurrent();
+
+  const { data: followingsData, loading: isLoadingFollowings } =
+    useFindMyFollowingsQuery({
+      skip: !isAuthenticated,
+    });
+  const followings = followingsData?.findMyFollowings ?? [];
+
+  const { data: sponsorsData, loading: isLoadingSponsors } =
+    useFindSponsorsByChannelQuery({
+      variables: {
+        channelId: channel.id,
+      },
+    });
+  const sponsors = sponsorsData?.findSponsorsByChannel ?? [];
+
+  const isOwnerChannel = user?.id === channel.id;
+  const isFollower = followings.some(
+    (following) => following.followingId === channel.id
+  );
+  const isSponsor = sponsors.some((sponsor) => sponsor.user.id === user?.id);
 
   const connectionState = useConnectionState();
   const participant = useRemoteParticipant(channel.id);
 
   const isOnline = participant && connectionState === ConnectionState.Connected;
-  const isDisabled = !isOnline || !isAuthenticated;
+  const isDisabled =
+    !isOnline ||
+    !isAuthenticated ||
+    !isChatEnabled ||
+    (isChatFollowersOnly && !isFollower && !isOwnerChannel) ||
+    (isChatPremiumFollowersOnly && !isSponsor && !isOwnerChannel);
 
-  if (connectionState === ConnectionState.Connecting) {
+  if (
+    connectionState === ConnectionState.Connecting ||
+    isLoadingProfile ||
+    isLoadingFollowings ||
+    isLoadingSponsors
+  ) {
     return <LoadingChat />;
   }
 
@@ -52,7 +90,16 @@ export function LiveChat({
       <CardContent className="flex h-full flex-col overflow-y-auto p-4">
         {isOnline ? (
           <>
-            <SendMessageForm channel={channel} isDisabled={isDisabled} />
+            <MessagesList channel={channel} />
+            <ChatInfo
+              isOwnerChannel={isOwnerChannel}
+              isFollower={isFollower}
+              isSponsor={isSponsor}
+              isChatEnabled={isChatEnabled!}
+              isChatFollowersOnly={isChatFollowersOnly!}
+              isChatPremiumFollowersOnly={isChatPremiumFollowersOnly!}
+            />
+            <SendMessageForm channel={channel} isDisabled={isDisabled!} />
           </>
         ) : (
           <div className="flex h-full flex-col items-center justify-center">

@@ -129,6 +129,32 @@
           "emojiPlaceholder": "Rechercher",
           "errorMessage": "Erreur lors de l'envoi du message"
         }
+      },
+      "settings": {
+        "heading": "Paramètres de diffusion",
+        "thumbnail": {
+          "updateButton": "Mettre à jour l'image",
+          "confirmModal": {
+            "heading": "Suppression de la miniature du stream",
+            "message": "Êtes-vous sûr de vouloir supprimer la miniature du stream ? Cette action est irréversible"
+          },
+          "info": "Formats supportés : JPG, JPEG, PNG, WEBP ou GIF. Taille maximale : 10 Mo",
+          "successUpdateMessage": "Image du stream mise à jour avec succès",
+          "errorUpdateMessage": "Erreur lors de la mise à jour de l'image du stream",
+          "successRemoveMessage": "Image du stream supprimée avec succès",
+          "errorRemoveMessage": "Erreur lors de la suppression de l'image du stream"
+        },
+        "info": {
+          "titleLabel": "Titre",
+          "titlePlaceholder": "Stream GTA 5",
+          "titleDescription": "Entrez le titre de votre stream. Il doit être court et mémorable",
+          "categoryLabel": "Catégorie",
+          "categoryPlaceholder": "Sélectionner une catégorie",
+          "categoryDescription": "Sélectionnez la catégorie à laquelle appartient votre contenu. Cela aidera les spectateurs à trouver plus facilement vos diffusions",
+          "submitButton": "Enregistrer les modifications",
+          "successMessage": "Paramètres du stream mis à jour avec succès",
+          "errorMessage": "Erreur lors de la mise à jour des paramètres du stream"
+        }
       }
     },
     "success": {
