@@ -8,7 +8,7 @@ const httpLink = createUploadLink({
   uri: SERVER_URL,
   credentials: "include",
   headers: {
-    "apollo-require-preflight": "true",
+    "x-apollo-operation-name": "UploadOperation",
   },
 });
 

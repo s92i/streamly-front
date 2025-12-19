@@ -5,7 +5,7 @@ import type { FindChannelByUsernameQuery } from "@/graphql/generated/output";
 import { constructUrl } from "@/utils/construct-urls";
 import { WifiOff } from "lucide-react";
 import { useTranslations } from "next-intl";
-import { CSSProperties } from "react";
+import { CSSProperties, useMemo } from "react";
 
 interface OfflineStreamProps {
   channel: FindChannelByUsernameQuery["findChannelByUsername"];
@@ -14,9 +14,18 @@ interface OfflineStreamProps {
 export function OfflineStream({ channel }: OfflineStreamProps) {
   const t = useTranslations("layout.stream.video");
 
-  const backgroundStyle: CSSProperties = channel.stream?.thumbnailUrl
+  const normalizedThumbnailUrl = useMemo(() => {
+    const url = channel.stream?.thumbnailUrl;
+    if (!url) return undefined;
+    if (url.startsWith("/streams/") || url.startsWith("streams/")) {
+      return constructUrl(url);
+    }
+    return constructUrl(`streams/${url}`);
+  }, [channel.stream?.thumbnailUrl]);
+
+  const backgroundStyle: CSSProperties = normalizedThumbnailUrl
     ? {
-        backgroundImage: `url(${constructUrl(channel.stream.thumbnailUrl)})`,
+        backgroundImage: `url(${normalizedThumbnailUrl})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }
@@ -27,11 +36,12 @@ export function OfflineStream({ channel }: OfflineStreamProps) {
       className="flex h-full flex-col items-center justify-center"
       style={backgroundStyle}
     >
-      {channel.stream?.thumbnailUrl && (
+      {normalizedThumbnailUrl && (
         <div className="absolute inset-0 z-0 rounded-lg bg-black opacity-60" />
       )}
+
       <WifiOff className="z-10 size-12 text-muted-foreground" />
-      <p className="z-10 text-lg dark:text-white text-black mt-3">
+      <p className="z-10 mt-3 text-lg text-black dark:text-white">
         {channel.displayName} {t("offline")}
       </p>
     </Card>

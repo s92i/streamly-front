@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@/components/ui/common/Button";
 import { Card } from "@/components/ui/common/Card";
 import { Form, FormField } from "@/components/ui/common/Form";
@@ -28,15 +30,15 @@ interface ChangeThumbnailFormProps {
 
 export function ChangeThumbnailForm({ stream }: ChangeThumbnailFormProps) {
   const t = useTranslations("layout.stream.settings.thumbnail");
-
   const { user } = useCurrent();
-
   const inputRef = useRef<HTMLInputElement>(null);
+
+  const normalizedThumbnail = stream?.thumbnailUrl?.replace(/^\/+/, "");
 
   const form = useForm<TypeUploadFileSchema>({
     resolver: zodResolver(uploadFileSchema),
     values: {
-      file: constructUrl(stream?.thumbnailUrl!),
+      file: normalizedThumbnail ?? undefined,
     },
   });
 
@@ -77,14 +79,14 @@ export function ChangeThumbnailForm({ stream }: ChangeThumbnailFormProps) {
         render={({ field }) => (
           <>
             <div className="flex items-center space-x-6">
-              {stream?.thumbnailUrl ? (
+              {normalizedThumbnail ? (
                 <Image
                   src={
                     field.value instanceof File
                       ? URL.createObjectURL(field.value)
-                      : field.value!
+                      : constructUrl(field.value)!
                   }
-                  alt={stream.title}
+                  alt={stream?.title!}
                   width={190}
                   height={80}
                   className="aspect-video rounded-lg"
@@ -94,6 +96,7 @@ export function ChangeThumbnailForm({ stream }: ChangeThumbnailFormProps) {
                   <ChannelAvatar channel={user!} />
                 </Card>
               )}
+
               <div className="flex w-full items-center gap-x-3">
                 <input
                   className="hidden"
@@ -101,13 +104,16 @@ export function ChangeThumbnailForm({ stream }: ChangeThumbnailFormProps) {
                   ref={inputRef}
                   onChange={handleImageChange}
                 />
+
                 <Button
+                  type="button"
                   variant="secondary"
                   onClick={() => inputRef.current?.click()}
                   disabled={isLoadingUpdate || isLoadingRemove}
                 >
                   {t("updateButton")}
                 </Button>
+
                 {stream?.thumbnailUrl && (
                   <ConfirmModal
                     heading={t("confirmModal.heading")}
@@ -125,6 +131,7 @@ export function ChangeThumbnailForm({ stream }: ChangeThumbnailFormProps) {
                 )}
               </div>
             </div>
+
             <p className="text-sm text-muted-foreground">{t("info")}</p>
           </>
         )}

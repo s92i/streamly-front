@@ -6,6 +6,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/common/Card";
+import { NO_INDEX_PAGE } from "@/lib/constants/seo.constants";
 import { CheckCircle } from "lucide-react";
 import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
@@ -17,10 +18,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
   return {
     title: t("heading"),
-    robots: {
-      index: false,
-      follow: false,
-    },
+    ...NO_INDEX_PAGE,
   };
 }
 

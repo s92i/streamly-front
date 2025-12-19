@@ -11,6 +11,7 @@ import { useCurrent } from "@/hooks/useCurrent";
 import { Pencil } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { ChangeThumbnailForm } from "./ChangeThumbnailForm";
+import { ChangeInfoForm } from "./ChangeInfoForm";
 
 interface StreamSettingsProps {
   channel: FindChannelByUsernameQuery["findChannelByUsername"];
@@ -39,6 +40,7 @@ export function StreamSettings({ channel }: StreamSettingsProps) {
           <DialogTitle>{t("heading")}</DialogTitle>
         </DialogHeader>
         <ChangeThumbnailForm stream={channel.stream} />
+        <ChangeInfoForm stream={channel.stream} />
       </DialogContent>
     </Dialog>
   );

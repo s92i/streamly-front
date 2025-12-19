@@ -170,6 +170,10 @@
       "backToChannel": "Retour à la chaîne",
       "support": "Si vous avez des questions, contactez notre support"
     },
+    "notFound": {
+      "description": "Oups, quelque chose s'est mal passé",
+      "backToHome": "Retour à l'accueil"
+    },
     "auth": {
       "register": {
         "heading": "Inscription sur Streamly",

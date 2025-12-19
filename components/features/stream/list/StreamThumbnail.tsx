@@ -7,7 +7,7 @@ import type { FindProfileQuery } from "@/graphql/generated/output";
 import { getRandomColor } from "@/utils/color";
 import { constructUrl } from "@/utils/construct-urls";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 interface StreamThumbnailProps {
   url: string | null | undefined;
@@ -25,15 +25,26 @@ export function StreamThumbnail({ url, user, isLive }: StreamThumbnailProps) {
     setRandomColor(getRandomColor());
   }, []);
 
+  const normalizedUrl = useMemo(() => {
+    if (!url) return undefined;
+
+    if (url.startsWith("/streams/") || url.startsWith("streams/")) {
+      return constructUrl(url);
+    }
+
+    return constructUrl(`streams/${url}`);
+  }, [url]);
+
   return (
     <div className="group relative aspect-video cursor-pointer rounded-lg">
       <div
         className="absolute inset-0 flex items-center justify-center rounded-xl opacity-0 transition-opacity group-hover:opacity-100"
         style={{ backgroundColor: randomColor }}
       />
-      {url ? (
+
+      {normalizedUrl ? (
         <Image
-          src={constructUrl(url)!}
+          src={normalizedUrl}
           alt={user.username}
           fill
           className="rounded-xl object-cover transition-transform group-hover:-translate-y-2 group-hover:translate-x-2"
@@ -43,8 +54,9 @@ export function StreamThumbnail({ url, user, isLive }: StreamThumbnailProps) {
           <ChannelAvatar channel={user} isLive={isLive} />
         </Card>
       )}
+
       {isLive && (
-        <div className="asbolute right-2 top-2 transition-transform group-hover:-translate-y-2 group-hover:translate-x-2">
+        <div className="absolute right-2 top-2 transition-transform group-hover:-translate-y-2 group-hover:translate-x-2">
           <LiveBadge />
         </div>
       )}
