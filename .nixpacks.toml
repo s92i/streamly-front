@@ -1,8 +1,12 @@
 [phases.setup]
 node_version = "20.17.0"
+install_bun = true
 
 [phases.build]
 command = "bun run build"
 
 [phases.start]
 command = "bun run start"
+
+[env]
+NODE_ENV = "production"
