@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     title: SITE_NAME,
     description: SITE_DESCRIPTION,
     type: "website",
-    emails: ["contact@streamly.com"],
+    emails: ["contact@streamly-live.click"],
     locale: "en_US",
     images: [
       {
