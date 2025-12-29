@@ -2,6 +2,9 @@
   "name": "streamly-front",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=20.9.0"
+  },
   "scripts": {
     "dev": "graphql-codegen --config graphql.config.ts && next dev --turbopack",
     "build": "graphql-codegen --config graphql.config.ts && next build",
